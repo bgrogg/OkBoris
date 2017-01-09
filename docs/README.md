@@ -55,7 +55,7 @@ Objective: Users can be created, read, edited and destroyed through the API.
 - [ ] build out user components as needed
 - [ ] style users components
 
-### Phase 3: Search by Location and 'looking for' (1 day)
+### Phase 3: Search by Location and 'Looking For' (1 day)
 
 Objective: Users can search for other users using filtered parameters
 
