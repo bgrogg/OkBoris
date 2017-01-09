@@ -19,10 +19,10 @@ OkBoris is a web application inspired by OkCupid built using Ruby on Rails and R
 ## Design Docs
 
 * [View Wireframes](https://github.com/bgrogg/OkBoris/tree/master/docs/wireframes)
-* [React Components](LINK)
-* [API endpoints](LINK)
-* [DB Schema](LINK)
-* [Sample State](LINK)
+* [React Components](https://github.com/bgrogg/OkBoris/blob/master/docs/component-hierarchy.md
+* [API endpoints](https://github.com/bgrogg/OkBoris/blob/master/docs/api-endpoints.md)
+* [DB Schema](https://github.com/bgrogg/OkBoris/blob/master/docs/schema.md)
+* [Sample State](https://github.com/bgrogg/OkBoris/blob/master/docs/sample-state.md)
 
 ## Implementation Timeline
 
@@ -73,7 +73,7 @@ Objective: Users can answer questions to match them with similar-minded users
 - [ ] users should be able to see match percentages for each other user
 - [ ] style CSS
 
-### Phase 5: Messages (2 days)
+### Phase 5: Messages (1 days)
 
 Objective: Messages belong to users, and can be viewed by recipient and sender
 
@@ -84,7 +84,7 @@ Objective: Messages belong to users, and can be viewed by recipient and sender
 - [ ] style CSS
 - [ ] seed messages
 
-### Phase 5: Touchups and Bonus Features (1 day)
+### Phase 6: Touchups and Bonus Features (1 day)
 - [ ] meets all minimum requirements
 - [ ] UX/UI considerations
 - [ ] CSS styling
