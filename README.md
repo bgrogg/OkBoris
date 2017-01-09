@@ -19,7 +19,7 @@ OkBoris is a web application inspired by OkCupid built using Ruby on Rails and R
 ## Design Docs
 
 * [View Wireframes](https://github.com/bgrogg/OkBoris/tree/master/docs/wireframes)
-* [React Components](https://github.com/bgrogg/OkBoris/blob/master/docs/component-hierarchy.md
+* [React Components](https://github.com/bgrogg/OkBoris/blob/master/docs/component-hierarchy.md)
 * [API endpoints](https://github.com/bgrogg/OkBoris/blob/master/docs/api-endpoints.md)
 * [DB Schema](https://github.com/bgrogg/OkBoris/blob/master/docs/schema.md)
 * [Sample State](https://github.com/bgrogg/OkBoris/blob/master/docs/sample-state.md)
