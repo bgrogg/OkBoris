@@ -35,9 +35,9 @@
 
 | column name | data type | details |
 |-------------|-----------|---------|
-| answer_id | integer | not null, foreign key, indexed |
+| answer_option_id | integer | not null, foreign key, indexed |
 | user_id | integer | not null, foreign key, indexed |
-| acceptable_responses | string | not null |
+
 
 #### messages
 
