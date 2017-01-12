@@ -22,7 +22,7 @@
   -webkit-text-stroke: 2px #e2f0fb;
 }
 
-.login-header {
+.signin-header {
   float: right;
   margin-top: 20px;
   margin-right: 8px;
@@ -39,22 +39,26 @@
   background-color: #1254af;
 }
 
-.login-button {
+.signin-button {
   border: 1px solid #3260c7;
   border-radius: 3px;
   padding: 10px 10px;
   margin: 0 10px;
 }
 
-.login-button:hover {
+.signin-button:hover {
   background-color: #1254af;
+}
+
+.ReactModal__Body--open {
+    overflow: hidden;
 }
 
 .reg-bottom {
   padding-bottom: 130px;
 }
 
-.catchphrase {
+.tag-line {
   margin: 0 auto 30px;
   text-align: center;
   font-weight: 300;

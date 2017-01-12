@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import Modal from 'react-modal';
 
-class LogInModal extends React.Component {
+class SignInModal extends React.Component {
   constructor(props) {
     super(props);
 
@@ -13,6 +14,8 @@ class LogInModal extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
+
+
 
   handleSubmit(e) {
     e.preventDefault();
@@ -39,7 +42,6 @@ class LogInModal extends React.Component {
   render() {
 
     return(
-      <div className="modal-background" onClick={ this.handleClick }>
         <form className="modal-content" onSubmit={ this.handleSubmit } onClick={ e => e.stopPropagation() }>
           <h2 className="sign-in-header">Sign in</h2>
           <input type="text"
@@ -56,15 +58,12 @@ class LogInModal extends React.Component {
 
           <p className="sign-in-errors">{this.props.errors.base}</p>
 
-
-
           <input type="submit" value="Let's go" className="sign-in-button" />
           <p className="sign-in-text">Sign in text</p>
         </form>
-      </div>
     );
 
   }
 }
 
-export default withRouter(LogInModal);
+export default withRouter(SignInModal);

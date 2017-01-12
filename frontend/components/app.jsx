@@ -8,7 +8,6 @@ const App = ({children, modal}) => {
 
   return (
     <div>
-      Test
       <NavBarContainer />
       { children }
       { modalEl }

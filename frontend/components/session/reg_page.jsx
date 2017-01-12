@@ -2,19 +2,38 @@ import React from 'react';
 import InitialRegistrationContainer from './initial_reg_container';
 import { withRouter } from 'react-router';
 import SignInModalContainer from './sign_in_modal_container';
+import SignInModal from './sign_in_modal';
+import Modal from 'react-modal';
 
 class RegPage extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      username: "",
+      password: "",
+      modalIsOpen: false
+    };
+
     this.handleClick = this.handleClick.bind(this);
     this.handleGuest = this.handleGuest.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+
   }
 
   handleClick(e) {
     e.preventDefault();
 
-    this.props.setModal(true);
+    this.openModal(true);
+  }
+
+  openModal() {
+    this.setState({modalIsOpen: true});
+  }
+
+  closeModal() {
+    this.setState({modalIsOpen: false});
   }
 
   handleGuest(e) {
@@ -82,7 +101,9 @@ class RegPage extends React.Component {
             {"Full Disclosure: Something funny here"}
           </p>
         </footer>
-        <SignInModalContainer />
+        <Modal isOpen={this.state.modalIsOpen} contentLabel="sign-in-modal" onRequestClose={this.closeModal}>
+          <SignInModalContainer />
+        </Modal>
       </div>
     );
   }
