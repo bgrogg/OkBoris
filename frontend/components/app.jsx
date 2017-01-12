@@ -1,5 +1,5 @@
 import React from 'react';
-import SignInModalContainer from './signup/sign_in_modal_container';
+import SignInModalContainer from './session/sign_in_modal_container';
 import NavBarContainer from './home/nav_bar_container';
 import { connect } from 'react-redux';
 
@@ -8,6 +8,7 @@ const App = ({children, modal}) => {
 
   return (
     <div>
+      Test
       <NavBarContainer />
       { children }
       { modalEl }
@@ -15,4 +16,10 @@ const App = ({children, modal}) => {
   );
 };
 
-export default App;
+const mapStateToProps = state => ({
+  modal: state.modal,
+});
+
+export default connect(
+  mapStateToProps
+)(App);

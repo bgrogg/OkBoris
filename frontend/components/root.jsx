@@ -6,7 +6,8 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 // react components
 import App from './app';
-import MatchContainer from '.browse/matches_container';
+import InitialRegistration from './session/initial_reg';
+import RegPageContainer from './session/reg_page_container';
 
 const Root = ({ store }) => {
 
@@ -21,7 +22,7 @@ const Root = ({ store }) => {
   const _ensureLoggedIn = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
     if (!currentUser) {
-      replace('/login');
+      replace('/signin');
     }
   };
 
@@ -29,8 +30,8 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory }>
         <Route path="/" component={App}>
-          <IndexRoute component={ MatchContainer } onEnter={_ensureLoggedIn} />
-        </Route>
+          <Route path='/signup' component={ RegPageContainer } onEnter={ _redirectIfLoggedIn } />
+      </Route>
       </Router>
     </Provider>
   );
