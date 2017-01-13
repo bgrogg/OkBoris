@@ -10,7 +10,7 @@ const PhaseOne = props => (
       value={props.position}
       className="phase-one-button-container">
       <option value="employer">Employer</option>
-      <option value="employee">Employee</option>
+      <option value="jobseeker">Jobseeker</option>
     </select>
 
     <input type="submit" value="Continue" className="continue-button" />

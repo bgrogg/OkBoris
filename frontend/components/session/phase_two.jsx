@@ -8,9 +8,11 @@ const PhaseTwo = (props) => (
       value={props.email}
       onChange={props.update("email")}
       placeholder="Email"
-      className="phase-two-box"/>
+      className="phase-two-box"/><br></br>
 
-
+    <span className="prefix">
+      I am located in
+    </span>
     <select
       onChange={props.update("location")}
       value={props.position}
@@ -20,6 +22,10 @@ const PhaseTwo = (props) => (
       <option value="downtown">Downtown</option>
     </select>
 
+
+    <span className="prefix">
+      and am seeking a(n)
+    </span>
     <select
       onChange={props.update("looking_for")}
       value={props.position}

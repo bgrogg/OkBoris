@@ -6,7 +6,7 @@
 
 .reg-header {
   position: relative;
-  height: 201px;
+  height: 200px;
   padding-top: 20px;
   margin-bottom: 30px;
 }
@@ -16,7 +16,7 @@
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
-  font-family: 'Oleo Script Swash Caps';
+  font-family: 'Merriweather', serif;
   color: #5981ce;
   font-size: 60px;
   -webkit-text-stroke: 2px #e2f0fb;
@@ -27,6 +27,7 @@
   margin-top: 20px;
   margin-right: 8px;
   text-align: right;
+  font-family: 'Open Sans';
 }
 
 .demo-button {
@@ -70,6 +71,7 @@
   margin: 0 auto 30px;
   text-align: center;
   font-weight: 300;
+  color: #9bb3e1;
   width: 660px;
   font-size: 18px;
 }
@@ -103,6 +105,25 @@
   vertical-align: top;
   width: 230px;
   height: 60px;
+  margin-right: 15px;
+  font-size: 18px;
+  background-color: #3260c7;
+  color: #fff;
+  border: 0px;
+  outline: 0px;
+  font-family: 'Open Sans';
+  padding: 0 20px;
+  box-shadow: 0 1px 3px #142a5d;
+}
+
+.phase-two-button-container {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+  height: 40px;
   margin-right: 15px;
   font-size: 18px;
   background-color: #3260c7;

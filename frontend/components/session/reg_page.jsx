@@ -59,16 +59,16 @@ class RegPage extends React.Component {
                 Demo Login
               </button>
             </div>
-            <h1 className="logo">OkBoris</h1>
+            <h1 className="logo">okboris</h1>
           </div>
           <div className="reg-bottom">
             <div className="tag-line">
               Join the best free job hunting site in San Francisco
-              <div className="smaller-caption">
-                {"Lorem ipsum dolor sit amet, primis ultrices. At quis praesent."}
-              </div>
             </div>
             <InitialRegistrationContainer />
+            <div className="smaller-caption">
+              {"Lorem ipsum dolor sit amet, primis ultrices. At quis praesent."}
+            </div>
           </div>
         </div>
         <div className="bottom-section group">
@@ -82,7 +82,7 @@ class RegPage extends React.Component {
             <div className="image-box">
               <img></img>
               <p>
-                {"Employees: Find the employer of your dreams!"}
+                {"Jobseekers: Find the employer of your dreams!"}
               </p>
             </div>
             <div className="image-box">

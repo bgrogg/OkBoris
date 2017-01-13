@@ -7,7 +7,15 @@ import Modal from 'react-modal';
 
 document.addEventListener('DOMContentLoaded', () => {
     Modal.setAppElement(document.getElementById('root'));
-    const store = configureStore();
+
+    let store;
+    if (window.currentUser) {
+      const preloadedState = { session: { currentUser: window.currentUser } };
+      store = configureStore(preloadedState);
+    } else {
+      store = configureStore();
+    }
+
     window.store = store;
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store}/>, root);

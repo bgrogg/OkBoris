@@ -15,8 +15,6 @@ class SignInModal extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-
-
   handleSubmit(e) {
     e.preventDefault();
 
@@ -42,6 +40,7 @@ class SignInModal extends React.Component {
   render() {
 
     return(
+      <div className="modal-background">
         <form className="modal-content" onSubmit={ this.handleSubmit } onClick={ e => e.stopPropagation() }>
           <h2 className="sign-in-header">Sign in</h2>
           <input type="text"
@@ -61,6 +60,7 @@ class SignInModal extends React.Component {
           <input type="submit" value="Let's go" className="sign-in-button" />
           <p className="sign-in-text">Sign in text</p>
         </form>
+      </div>
     );
 
   }

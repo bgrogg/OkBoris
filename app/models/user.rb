@@ -31,7 +31,7 @@ class User < ActiveRecord::Base
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil unless user
-    user.password_is?(password) ? user : nil
+    user.valid_password?(password) ? user : nil
   end
 
   def password=(password)
@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
     @password = password
   end
 
-  def password_is?(password)
+  def valid_password?(password)
     BCrypt::Password.new(self.password_digest).is_password?(password)
   end
 
