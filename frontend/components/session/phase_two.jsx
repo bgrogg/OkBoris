@@ -20,11 +20,11 @@ const PhaseTwo = (props) => (
       <option value="mission">Mission</option>
       <option value="nob-hill">Nob Hill</option>
       <option value="downtown">Downtown</option>
-    </select>
+    </select><br></br>
 
 
     <span className="prefix">
-      and am seeking a(n)
+      and am seeking a
     </span>
     <select
       onChange={props.update("looking_for")}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import SignInModal from './sign_in_modal';
-import { login } from '../../actions/session_actions';
+import { requestLogin } from '../../actions/session_actions';
 import { receiveModal } from '../../actions/modal_actions';
 
 const mapStateToProps = state => ({
@@ -11,7 +11,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  login: user => dispatch(login(user)),
+  login: user => dispatch(requestLogin(user)),
   setModal: modal => dispatch(receiveModal(modal)),
 });
 

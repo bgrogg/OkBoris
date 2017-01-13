@@ -51,7 +51,7 @@ class RegPage extends React.Component {
         <div className="background group">
           <div className="reg-header group">
             <div className="signin-header">
-              { "Already a member?" }
+              { "Have an account?" }
               <button className="signin-button" onClick={ this.handleClick } >
                 Sign In
               </button>
@@ -101,7 +101,7 @@ class RegPage extends React.Component {
             {"Full Disclosure: Something funny here"}
           </p>
         </footer>
-        <Modal isOpen={this.state.modalIsOpen} contentLabel="sign-in-modal" onRequestClose={this.closeModal}>
+        <Modal isOpen={this.state.modalIsOpen} contentLabel="modal" onRequestClose={this.closeModal}>
           <SignInModalContainer />
         </Modal>
       </div>

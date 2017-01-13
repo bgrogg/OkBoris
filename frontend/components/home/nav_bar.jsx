@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
+import { requestLogout } from '../../actions/session_actions';
 
 class NavBar extends React.Component {
   constructor(props) {
