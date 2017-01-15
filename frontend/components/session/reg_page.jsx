@@ -40,7 +40,7 @@ class RegPage extends React.Component {
   handleGuest(e) {
     e.preventDefault();
 
-    this.props.login({ username: "username", password: "password"})
+    this.props.login({ username: "borisgrogg", password: "password"})
       .then(user => {
         this.props.router.push('/');
       });
