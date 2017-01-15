@@ -4,6 +4,7 @@ import { withRouter } from 'react-router';
 import SignInModalContainer from './sign_in_modal_container';
 import SignInModal from './sign_in_modal';
 import Modal from 'react-modal';
+import ModalStyle from './modal_style';
 
 class RegPage extends React.Component {
   constructor(props) {
@@ -104,7 +105,8 @@ class RegPage extends React.Component {
         <Modal
           isOpen={this.state.modalIsOpen}
           contentLabel="modal"
-          onRequestClose={this.closeModal}>
+          onRequestClose={this.closeModal}
+          style={ModalStyle}>
             <SignInModalContainer />
         </Modal>
       </div>
