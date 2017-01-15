@@ -6,7 +6,7 @@ import Modal from 'react-modal';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    Modal.setAppElement(document.getElementById('root'));
+    Modal.setAppElement(document.body);
 
     let store;
     if (window.currentUser) {

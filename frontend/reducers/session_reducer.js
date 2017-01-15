@@ -10,8 +10,8 @@ const _nullUser = {
   errors: []
 };
 
-const SessionReducer = function(state = _nullUser, action){
-
+const SessionReducer = (state = _nullUser, action) => {
+  Object.freeze(state);
   switch(action.type){
     case RECEIVE_CURRENT_USER:
       return {

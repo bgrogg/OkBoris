@@ -17,9 +17,9 @@
   transform: translateX(-50%);
   bottom: 0;
   font-family: 'Merriweather', serif;
-  color: #5981ce;
+  color: #618de2;
   font-size: 60px;
-  -webkit-text-stroke: 2px #e2f0fb;
+  -webkit-text-stroke: 2px #fff;
 }
 
 .signin-header {
@@ -108,9 +108,6 @@
 }
 
 .phase-one-button-container {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   display: inline-block;
   vertical-align: top;
   width: 230px;
@@ -124,12 +121,12 @@
   font-family: 'Open Sans';
   padding: 0 20px;
   box-shadow: 0 1px 3px #142a5d;
-}
-
-.phase-two-button-container {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.phase-two-button-container {
   display: inline-block;
   vertical-align: top;
   width: 200px;
@@ -143,6 +140,9 @@
   font-family: 'Open Sans';
   padding: 0 20px;
   box-shadow: 0 1px 3px #142a5d;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .continue-button {

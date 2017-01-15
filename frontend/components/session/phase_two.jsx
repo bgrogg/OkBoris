@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PhaseTwo = (props) => (
+const PhaseTwo = props => (
   <form onSubmit={props.submit}>
 
     <label className="phase-two-label">Email</label>
@@ -30,7 +30,7 @@ const PhaseTwo = (props) => (
       onChange={props.update("looking_for")}
       value={props.position}
       className="phase-two-button-container">
-      <option value="full-term">Full-time Contract</option>
+      <option value="full-time">Full-time Contract</option>
       <option value="part-time">Part-time Contract</option>
       <option value="hourly">Hourly Contract</option>
     </select><br></br>

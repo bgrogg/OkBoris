@@ -47,7 +47,8 @@ class Api::UsersController < ApplicationController
               :summary,
               :looking_for,
               :profile_pic_id,
-              :image_file_name
+              :image_file_name,
+              :position
              )
   end
 end

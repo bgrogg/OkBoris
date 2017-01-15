@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import SignUpFormContainer from './sign_up_form_container';
 import PhaseOne from './phase_one';
 import PhaseTwo from './phase_two';
-import SignUpFormContainer from './sign_up_form_container';
 
 
 class InitialRegistration extends React.Component {
@@ -11,9 +11,9 @@ class InitialRegistration extends React.Component {
     this.state = {
       regStage: 0,
       email: "",
-      location: "",
-      looking_for: "",
-      position: ""
+      location: "mission",
+      looking_for: "full-time",
+      position: "recruiter"
     };
 
     this.update = this.update.bind(this);
@@ -79,6 +79,7 @@ class InitialRegistration extends React.Component {
       );
     }
 
+    console.log(this.state);
     return (
       <div className="form-container">
         {currentForm}

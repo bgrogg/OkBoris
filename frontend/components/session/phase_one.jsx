@@ -9,7 +9,7 @@ const PhaseOne = props => (
       onChange={props.update("position")}
       value={props.position}
       className="phase-one-button-container">
-      <option value="employer">Employer</option>
+      <option value="recruiter">Recruiter</option>
       <option value="jobseeker">Jobseeker</option>
     </select>
 

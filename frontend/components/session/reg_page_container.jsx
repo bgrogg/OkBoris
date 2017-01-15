@@ -2,11 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import RegPage from './reg_page';
 import { receiveModal } from '../../actions/modal_actions';
-import { login } from '../../actions/session_actions';
+import { requestLogin } from '../../actions/session_actions';
 
 const mapDispatchToProps = dispatch => ({
   setModal: modal => dispatch(receiveModal(modal)),
-  login: user => dispatch(login(user)),
+  login: user => dispatch(requestLogin(user)),
 });
 
 export default connect(

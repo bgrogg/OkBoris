@@ -76,7 +76,7 @@ class RegPage extends React.Component {
             <div className="image-box">
               <img></img>
               <p>
-                {"Employers: Find the perfect employee for your project!"}
+                {"Recruiters: Find the perfect employee for your project!"}
               </p>
             </div>
             <div className="image-box">
@@ -101,8 +101,11 @@ class RegPage extends React.Component {
             {"Full Disclosure: Something funny here"}
           </p>
         </footer>
-        <Modal isOpen={this.state.modalIsOpen} contentLabel="modal" onRequestClose={this.closeModal}>
-          <SignInModalContainer />
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          contentLabel="modal"
+          onRequestClose={this.closeModal}>
+            <SignInModalContainer />
         </Modal>
       </div>
     );
