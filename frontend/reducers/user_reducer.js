@@ -1,14 +1,11 @@
 import { RECEIVE_USERS } from '../actions/user_actions';
+import { merge } from 'lodash';
 
-const initialState = {
-  users: {}
-};
-
-const UserReducer = (state = initialState, action) => {
+const UserReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_USERS:
-      return { users: action.users };
+      return merge({}, action.users);
     default:
       return state;
   }

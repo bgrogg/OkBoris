@@ -9,6 +9,7 @@ import App from './app';
 import InitialRegistration from './session/initial_reg';
 import RegPageContainer from './session/reg_page_container';
 import MatchesContainer from './browse/matches_container';
+import UserIndexContainer from './user/user_index_container';
 
 const Root = ({ store }) => {
 
@@ -30,7 +31,7 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory }>
         <Route path="/" component={App}>
-          <IndexRoute component={ MatchesContainer } onEnter={ _ensureLoggedIn }/>
+          <IndexRoute component={ UserIndexContainer } onEnter={ _ensureLoggedIn }/>
           <Route path='/signup' component={ RegPageContainer } onEnter={ _redirectIfLoggedIn } />
       </Route>
       </Router>

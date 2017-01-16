@@ -32,7 +32,7 @@ class SignUpForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign(Object.assign({}, this.state), this.props.regInfo);
+    const user = Object.assign(Object.assign({}, this.state), this.props.userInfo);
 
     this.props.signup(user)
       .then(user => {
@@ -62,16 +62,16 @@ class SignUpForm extends React.Component {
           value={this.state.username}
           onChange={this.update("username")}
           placeholder="Username"
-          className="phase-two-box"/><br></br>
-        <p className="reg-errors">{this.displayUsername()} {this.props.errors.username}</p>
+          className="stage-two-box"/><br></br>
+        <p className="splash-errors">{this.displayUsername()} {this.props.errors.username}</p>
 
         <label className="final-form-label">Password</label>
         <input type="password"
           value={this.state.password}
           onChange={this.update("password")}
           placeholder="Password"
-          className="phase-two-box"/><br></br>
-        <p className="reg-errors">{this.displayPassword()} {this.props.errors.password}</p>
+          className="stage-two-box"/><br></br>
+        <p className="splash-errors">{this.displayPassword()} {this.props.errors.password}</p>
 
 
         <input type="submit" value="Done!" className="done-button" />

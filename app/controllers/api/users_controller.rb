@@ -15,7 +15,7 @@ class Api::UsersController < ApplicationController
     @user = User.find(params[:id])
 
     if @user
-      render :profile
+      render :show
     else
       render json: @user.errors, status: 422
     end
@@ -25,7 +25,7 @@ class Api::UsersController < ApplicationController
     @user = User.find(params[:id])
 
     if @user.update_attributes(user_params)
-      render :profile
+      render :show
     else
       render json: @user.errors, status: 422
     end
@@ -38,17 +38,16 @@ class Api::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user)
-      .permit(
-              :username,
-              :password,
-              :email,
-              :location,
-              :summary,
-              :looking_for,
-              :profile_pic_id,
-              :image_file_name,
-              :position
-             )
+    params.require(:user).permit(
+      :username,
+      :password,
+      :email,
+      :location,
+      :summary,
+      :looking_for,
+      :profile_pic_id,
+      :image_file_name,
+      :position
+    )
   end
 end

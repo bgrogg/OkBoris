@@ -6,7 +6,7 @@ import SignInModal from './sign_in_modal';
 import Modal from 'react-modal';
 import ModalStyle from './modal_style';
 
-class RegPage extends React.Component {
+class SplashPage extends React.Component {
   constructor(props) {
     super(props);
 
@@ -40,7 +40,7 @@ class RegPage extends React.Component {
   handleGuest(e) {
     e.preventDefault();
 
-    this.props.login({ username: "borisgrogg", password: "password"})
+    this.props.login({ username: "bigwig", password: "password"})
       .then(user => {
         this.props.router.push('/');
       });
@@ -49,20 +49,27 @@ class RegPage extends React.Component {
   render() {
     return (
       <div>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          contentLabel="modal"
+          onRequestClose={this.closeModal}
+          style={ModalStyle}>
+            <SignInModalContainer />
+        </Modal>
         <div className="background group">
-          <div className="reg-header group">
+          <div className="splash-header group">
             <div className="signin-header">
               { "Have an account?" }
               <button className="signin-button" onClick={ this.handleClick } >
                 Sign In
               </button>
-              <button className="demo-button" onClick={ this.handleGuest } >
-                Demo Login
+              <button className="guest-button" onClick={ this.handleGuest } >
+                Guest Login
               </button>
             </div>
-            <h1 className="logo">okboris</h1>
+            <h1 className="logo">OkBoris</h1>
           </div>
-          <div className="reg-bottom">
+          <div className="splash-bottom">
             <div className="tag-line">
               Join the best free job hunting site in San Francisco
             </div>
@@ -102,16 +109,9 @@ class RegPage extends React.Component {
             {"Full Disclosure: Something funny here"}
           </p>
         </footer>
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          contentLabel="modal"
-          onRequestClose={this.closeModal}
-          style={ModalStyle}>
-            <SignInModalContainer />
-        </Modal>
       </div>
     );
   }
 }
 
-export default withRouter(RegPage);
+export default withRouter(SplashPage);

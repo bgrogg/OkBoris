@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import RegPage from './reg_page';
+import SplashPage from './splash_page';
 import { receiveModal } from '../../actions/modal_actions';
 import { requestLogin } from '../../actions/session_actions';
 
@@ -12,4 +12,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   null,
   mapDispatchToProps
-)(RegPage);
+)(SplashPage);

@@ -1,14 +1,14 @@
 import React from 'react';
 
-const PhaseOne = props => (
+const stageOne = props => (
   <form onSubmit={props.submit} className="form-one">
-    <span className="prefix">
+    <span className="splash-text">
       I am an
     </span>
     <select
       onChange={props.update("position")}
       value={props.position}
-      className="phase-one-button-container">
+      className="stage-one-button-container">
       <option value="recruiter">Recruiter</option>
       <option value="jobseeker">Jobseeker</option>
     </select>
@@ -17,4 +17,4 @@ const PhaseOne = props => (
   </form>
 );
 
-export default PhaseOne;
+export default stageOne;

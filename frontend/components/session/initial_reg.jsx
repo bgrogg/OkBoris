@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import SignUpFormContainer from './sign_up_form_container';
-import PhaseOne from './phase_one';
-import PhaseTwo from './phase_two';
+import StageOne from './stage_one';
+import StageTwo from './stage_two';
 
 
 class InitialRegistration extends React.Component {
@@ -16,9 +16,9 @@ class InitialRegistration extends React.Component {
       position: "recruiter"
     };
 
-    this.update = this.update.bind(this);
     this.handleFirstStage = this.handleFirstStage.bind(this);
     this.handleSecondStage = this.handleSecondStage.bind(this);
+    this.update = this.update.bind(this);
   }
 
   update(field) {
@@ -48,17 +48,16 @@ class InitialRegistration extends React.Component {
   render() {
 
     let currentForm;
-
     if (this.state.regStage === 0) {
       currentForm = (
-        <PhaseOne
+        <StageOne
           submit={ this.handleFirstStage }
           update={ this.update }
           position={ this.state.position } />
       );
     } else if (this.state.regStage === 1) {
       currentForm = (
-        <PhaseTwo
+        <StageTwo
           submit={ this.handleSecondStage }
           update={ this.update }
           email={ this.state.email }
@@ -67,7 +66,7 @@ class InitialRegistration extends React.Component {
       );
     } else if (this.state.regStage === 2) {
 
-      const regInfo = {
+      const userInfo = {
         position: this.state.position,
         email: this.state.email,
         location: this.state.location,
@@ -75,11 +74,10 @@ class InitialRegistration extends React.Component {
       };
 
       currentForm = (
-        <SignUpFormContainer regInfo={ regInfo } />
+        <SignUpFormContainer userInfo={ userInfo } />
       );
     }
 
-    console.log(this.state);
     return (
       <div className="form-container">
         {currentForm}
