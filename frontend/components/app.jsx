@@ -1,22 +1,18 @@
 import React from 'react';
-import SignInModalContainer from './session/sign_in_modal_container';
 import NavBarContainer from './home/nav_bar_container';
 import { connect } from 'react-redux';
 
-const App = ({children, modal}) => {
-  const modalEl = modal ? <SignInModalContainer /> : null;
+const App = ({children}) => {
 
   return (
     <div>
       <NavBarContainer />
       { children }
-      { modalEl }
     </div>
   );
 };
 
 const mapStateToProps = state => ({
-  modal: state.modal,
 });
 
 export default connect(
