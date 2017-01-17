@@ -20,7 +20,7 @@ class NavBar extends React.Component {
       return <div></div>;
     } else {
       return(
-        <nav className="site-nav group">
+        <nav className="nav-bar">
           <div>
             <h1 className="nav-logo">
               <a href="/">okb</a>

@@ -1,4 +1,4 @@
-.site-nav {
+.nav-bar {
   border-bottom: 1px solid rgba(157,186,242,0.25);
   min-width: 940px;
   height: 70px;
@@ -9,10 +9,16 @@
 .nav-logo {
   float: left;
   font-family: 'Merriweather', serif;
-  color: #5981ce;
+  color: #618de2;
   font-size: 40px;
-  -webkit-text-stroke: 2px #fff;
+  -webkit-text-stroke: 2px white;
   margin: 10px 40px 0 30px;
+  text-shadow:
+    2px 2px 0 #fff,
+  -1px -1px 0 #fff,
+   1px -1px 0 #fff,
+   -1px 1px 0 #fff,
+    1px 1px 0 #fff;
 }
 
 .nav-logo:hover {
@@ -42,6 +48,7 @@
   color: #d6e1f9;
   cursor: pointer;
   font-size: 16px;
+  font-family: 'Open Sans';
   line-height: 61px;
   padding-top: 4px;
   margin-right: 40px;

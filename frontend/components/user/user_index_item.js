@@ -16,9 +16,10 @@ class UserIndexItem extends Component {
 
   render() {
     return (
-      <div className="match-item-wrapper">
-        <div className="match-item">
-          <div className="match-text">
+      <div className="browse-wrapper">
+        <div className="browse-item">
+          <img src={this.props.user.image_url} className="browse-pic" onClick={ this.handleProfile }></img>
+          <div className="browse-text">
             <p className="username-text">{this.props.user.username}</p>
             <p className="user-browse-info">{this.props.user.location}</p>
           </div>

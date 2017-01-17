@@ -126,14 +126,14 @@
   padding-left: 10px;
 }
 
-.match-container {
+.user-index-container {
   width: 900px;
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.match-item-wrapper {
+.browse-wrapper {
   float: left;
   position: relative;
   width: 280px;
@@ -141,7 +141,7 @@
   margin: 0 10px 40px 10px;
 }
 
-.match-item {
+.browse-item {
   display: block;
   position: relative;
   top: 0;
@@ -149,7 +149,7 @@
   width: 280px;
   height: 385px;
   border-radius: 5px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .browse-pic {
@@ -169,7 +169,7 @@
   cursor: pointer;
 }
 
-.match-text {
+.browse-text {
   position: relative;
   top: 0;
   width: 100%;
