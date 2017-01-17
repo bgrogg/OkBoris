@@ -4,7 +4,8 @@ import { selectAllUsers } from '../../reducers/selectors';
 import { fetchUsers } from '../../actions/user_actions';
 
 const mapStateToProps = state => ({
-  users: selectAllUsers(state)
+  users: selectAllUsers(state),
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({

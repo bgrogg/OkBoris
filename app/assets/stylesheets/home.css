@@ -1,0 +1,71 @@
+.site-nav {
+  border-bottom: 1px solid rgba(157,186,242,0.25);
+  min-width: 940px;
+  height: 70px;
+  background: #104da1;
+
+}
+
+.nav-logo {
+  float: left;
+  font-family: 'Merriweather', serif;
+  color: #5981ce;
+  font-size: 40px;
+  -webkit-text-stroke: 2px #e2f0fb;
+  margin: 10px 40px 0 30px;
+}
+
+.nav-logo:hover {
+  color: #6d9bf3;
+}
+
+.nav-prof-pic {
+  margin-top: 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #ccc;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.nav-prof-pic:hover {
+  box-shadow: 0px 0px 5px #fff;
+}
+
+.nav-left {
+  float: left;
+}
+
+.nav-left-link {
+  float: left;
+  color: #d6e1f9;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 61px;
+  padding-top: 4px;
+  margin-right: 40px;
+}
+
+.nav-left-link:hover {
+  color: #f5f8ff;
+}
+
+.nav-right {
+  float: right;
+  margin-right: 40px;
+}
+
+.nav-right-link {
+  float: left;
+  color: #d6e1f9;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 61px;
+  padding-top: 4px;
+  margin-left: 40px;
+}
+
+.nav-right-link:hover {
+  color: #f5f8ff;
+}

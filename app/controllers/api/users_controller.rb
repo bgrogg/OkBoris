@@ -7,7 +7,7 @@ class Api::UsersController < ApplicationController
       log_in(@user)
       render :show
     else
-      render json: @user.errors, status: 422
+      render json: @user.errors.full_messages, status: 422
     end
   end
 
@@ -22,17 +22,20 @@ class Api::UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:id])
+    @user = current_user
 
     if @user.update_attributes(user_params)
+      session[:session_token] = @user.reset_session_token!
       render :show
     else
-      render json: @user.errors, status: 422
+      render json: @user.errors.full_messages, status: 422
+      render :show
     end
   end
 
   def index
     @users = User.all
+    @users
   end
 
   private

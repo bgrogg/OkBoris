@@ -8,7 +8,6 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './app';
 import InitialRegistration from './session/initial_reg';
 import RegPageContainer from './session/reg_page_container';
-import MatchesContainer from './browse/matches_container';
 import UserIndexContainer from './user/user_index_container';
 
 const Root = ({ store }) => {

@@ -3,7 +3,7 @@ import React from 'react';
 const stageOne = props => (
   <form onSubmit={props.submit} className="form-one">
     <span className="splash-text">
-      I am an
+      I am a
     </span>
     <select
       onChange={props.update("position")}

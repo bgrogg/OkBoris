@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store.js';
 import Root from './components/root';
 import Modal from 'react-modal';
-import { fetchUsers } from './actions/user_actions';
-
 
 document.addEventListener('DOMContentLoaded', () => {
+
     Modal.setAppElement(document.body);
 
     let store;
