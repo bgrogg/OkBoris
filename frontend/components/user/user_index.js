@@ -9,6 +9,8 @@ class UserIndex extends Component {
     this.display = this.display.bind(this);
     this.sortedUsers = this.sortedUsers.bind(this);
     this.userIndexItems = this.userIndexItems.bind(this);
+    this.positionSeeking = this.positionSeeking.bind(this);
+    this.preferences = this.preferences.bind(this);
   }
 
 
@@ -35,7 +37,7 @@ class UserIndex extends Component {
 
     return (
       <div className="preferences-bar">
-        <p className="browse-large">Searching for {seeking}s in your area.</p>
+        <p className="browse-large">Searching for "{seeking}s" in your area.</p>
       </div>
     );
 
@@ -70,7 +72,7 @@ class UserIndex extends Component {
     if (!this.props.currentUser) {
       return null;
     }
-    
+
     const { children } = this.props;
     return (
       <div className="browse-main">

@@ -2,7 +2,7 @@ import React from 'react';
 import NavBarContainer from './home/nav_bar_container';
 import { connect } from 'react-redux';
 
-const App = ({children}) => {
+const App = ({ children }) => {
 
   return (
     <div>

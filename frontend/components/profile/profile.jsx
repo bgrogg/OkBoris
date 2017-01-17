@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 
@@ -11,7 +10,6 @@ class Profile extends React.Component {
       imageUrl: null
     };
 
-    this.profileActions = this.profileActions.bind(this);
     this.handleImage = this.handleImage.bind(this);
     this.profPic = this.profPic.bind(this);
   }
@@ -34,7 +32,6 @@ class Profile extends React.Component {
 
   handleImage(e) {
     e.preventDefault();
-
     const user = this.props.profile;
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
