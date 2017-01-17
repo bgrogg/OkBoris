@@ -26,3 +26,54 @@ user1 = User.create!(
   frameworks: "Rails, React",
   position: "jobseeker"
 )
+
+user2 = User.create!(
+  username: "b0risgr0gg",
+  email: "doppelganger@gmail.com",
+  password: "password",
+  location: "Mission",
+  summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
+           dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
+           magna dictum eros, ante et integer nulla, id egestas, metus
+           velit, eu tincidunt orci velit pulvinar sapien.",
+  looking_for: "part-time",
+  languages: "Swift, Objective-C",
+  profile_pic_id: 2,
+  image_file_name: "placeholder.png",
+  frameworks: "Foundation, UIKit, CloudKit",
+  position: "jobseeker"
+)
+
+user3 = User.create!(
+  username: "notBoris",
+  email: "twins@gmail.com",
+  password: "password",
+  location: "Downtown",
+  summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
+           dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
+           magna dictum eros, ante et integer nulla, id egestas, metus
+           velit, eu tincidunt orci velit pulvinar sapien.",
+  looking_for: "hourly",
+  languages: "C++, C#",
+  profile_pic_id: 3,
+  image_file_name: "placeholder.png",
+  frameworks: ".NET, Rails",
+  position: "jobseeker"
+)
+
+user4 = User.create!(
+  username: "bigwig",
+  email: "bigwig@gmail.com",
+  password: "password",
+  location: "Downtown",
+  summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
+           dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
+           magna dictum eros, ante et integer nulla, id egestas, metus
+           velit, eu tincidunt orci velit pulvinar sapien.",
+  looking_for: "full-time",
+  languages: "Ruby, Javascript",
+  profile_pic_id: 4,
+  image_file_name: "placeholder.png",
+  frameworks: "React, Rails",
+  position: "recruiter"
+)
