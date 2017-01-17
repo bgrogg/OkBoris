@@ -25,7 +25,7 @@ class UserIndex extends Component {
   userIndexItems() {
     const matches = this.sortedUsers().map(user => {
       return (
-        <li className="dishwasher" key={ user.user }>
+        <li key={ user.user }>
           <UserIndexItem
             currentUser={ this.props.currentUser }
             user={ this.props.users[user.user] } />

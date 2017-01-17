@@ -16,11 +16,11 @@ class UserIndexItem extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <div>
-            <p>{this.props.user.username}</p>
-            <p>{this.props.user.location}</p>
+      <div className="match-item-wrapper">
+        <div className="match-item">
+          <div className="match-text">
+            <p className="username-text">{this.props.user.username}</p>
+            <p className="user-browse-info">{this.props.user.location}</p>
           </div>
         </div>
       </div>
