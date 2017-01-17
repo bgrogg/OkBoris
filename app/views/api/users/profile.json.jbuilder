@@ -1,0 +1,10 @@
+json.id @user.id
+json.username @user.username
+json.email @user.email
+json.position @user.position
+json.looking_for @user.looking_for
+json.location @user.location
+json.summary @user.summary
+json.languages @user.languages
+json.frameworks @user.thinking
+json.image_file_name asset_path(@user.image_file_name)

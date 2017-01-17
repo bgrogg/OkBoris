@@ -15,7 +15,7 @@ class Api::UsersController < ApplicationController
     @user = User.find(params[:id])
 
     if @user
-      render :show
+      render :profile
     else
       render json: @user.errors, status: 422
     end
@@ -26,10 +26,9 @@ class Api::UsersController < ApplicationController
 
     if @user.update_attributes(user_params)
       session[:session_token] = @user.reset_session_token!
-      render :show
+      render :profile
     else
       render json: @user.errors.full_messages, status: 422
-      render :show
     end
   end
 

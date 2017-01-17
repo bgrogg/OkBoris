@@ -11,14 +11,14 @@ class UserIndexItem extends Component {
   handleProfile(e) {
     e.preventDefault();
 
-    this.props.router.push('/users/${this.props.user.id}');
+    this.props.router.push(`/profile/${this.props.user.id}`);
   }
 
   render() {
     return (
       <div className="browse-wrapper">
         <div className="browse-item">
-          <img src={this.props.user.image_url} className="browse-pic" onClick={ this.handleProfile }></img>
+          <img src={this.props.user.image_file_name} className="browse-pic" onClick={ this.handleProfile }></img>
           <div className="browse-text">
             <p className="username-text">{this.props.user.username}</p>
             <p className="user-browse-info">{this.props.user.location}</p>

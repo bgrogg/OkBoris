@@ -22,7 +22,7 @@ user1 = User.create!(
   looking_for: "full-time",
   languages: "Ruby, Javascript",
   profile_pic_id: 1,
-  image_file_name: "placeholder.png",
+  image_file_name: "default_profile.png",
   frameworks: "Rails, React",
   position: "jobseeker"
 )
@@ -39,7 +39,7 @@ user2 = User.create!(
   looking_for: "part-time",
   languages: "Swift, Objective-C",
   profile_pic_id: 2,
-  image_file_name: "placeholder.png",
+  image_file_name: "default_profile.png",
   frameworks: "Foundation, UIKit, CloudKit",
   position: "jobseeker"
 )
@@ -56,7 +56,7 @@ user3 = User.create!(
   looking_for: "hourly",
   languages: "C++, C#",
   profile_pic_id: 3,
-  image_file_name: "placeholder.png",
+  image_file_name: "default_profile.png",
   frameworks: ".NET, Rails",
   position: "jobseeker"
 )
@@ -73,7 +73,23 @@ user4 = User.create!(
   looking_for: "full-time",
   languages: "Ruby, Javascript",
   profile_pic_id: 4,
-  image_file_name: "placeholder.png",
+  image_file_name: "default_profile.png",
   frameworks: "React, Rails",
   position: "recruiter"
+)
+
+user5 = User.create!(
+  username: "gorisbrogg",
+  email: "notme@gmail.com",
+  password: "password",
+  location: "Mission",
+  summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
+           magna dictum eros, ante et integer nulla, id egestas, metus
+           velit, eu tincidunt orci velit pulvinar sapien.",
+  looking_for: "hourly",
+  languages: "Java",
+  profile_pic_id: 5,
+  image_file_name: "default_profile.png",
+  frameworks: "Angular",
+  position: "jobseeker"
 )
