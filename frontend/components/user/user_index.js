@@ -16,10 +16,37 @@ class UserIndex extends Component {
     this.props.fetchUsers();
   }
 
+  positionSeeking(user) {
+    if (this.props.currentUser.position === "jobseeker") {
+      return this.props.users[user.user].position === "recruiter";
+    } else {
+      return this.props.users[user.user].position === "jobseeker";
+    }
+  }
+
+  preferences() {
+    let seeking;
+
+    if (this.props.currentUser.position === "recruiter") {
+      seeking = "jobseeker";
+    } else {
+      seeking = "recruiter";
+    }
+
+    return (
+      <div className="preferences-bar">
+        <p className="browse-large">Searching for {seeking}s in your area.</p>
+      </div>
+    );
+
+  }
+
   sortedUsers() {
     return Object.keys(this.props.users).map(user => {
       return { user };
-    });
+    }).filter(user =>
+      this.positionSeeking(user)
+    );
   }
 
   userIndexItems() {
@@ -40,13 +67,20 @@ class UserIndex extends Component {
   }
 
   render() {
-    const { users, children } = this.props;
+    if (!this.props.currentUser) {
+      return null;
+    }
+    
+    const { children } = this.props;
     return (
-      <div className="user-index-container">
-        <ul className="user-index-group">
-          {this.display()}
-        </ul>
-        {children}
+      <div className="browse-main">
+        {this.preferences()}
+        <div className="user-index-container">
+          <ul className="user-index-group">
+            {this.display()}
+          </ul>
+          {children}
+        </div>
       </div>
     );
   }
