@@ -34,6 +34,11 @@ class NavBar extends React.Component {
           <div>
             <ul className="nav-right group">
               <li className="nav-right-link">
+                <a href={"#/profile/"+this.props.currentUser.id}>
+                  <img src={this.props.currentUser.image_file_name} className="nav-prof-pic"/>
+                </a>
+              </li>
+              <li className="nav-right-link">
                 <button onClick={this.handleLogOut}>Log Out</button>
               </li>
             </ul>

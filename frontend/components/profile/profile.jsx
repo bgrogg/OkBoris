@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import AboutContainer from './about_container';
+import TabsContainer from '../tabs/tabs_container';
 
 class Profile extends React.Component {
   constructor(props) {
@@ -85,6 +87,11 @@ class Profile extends React.Component {
               </div>
             </div>
           </div>
+          <TabsContainer
+            tabs={ [ <AboutContainer /> ] }
+            tabNames={ ["About", "Questions"] }
+            styling="profile-tabs"
+            />
         </main>
       );
     }
