@@ -1,7 +1,6 @@
 .profile-main {
-  width: 100%;
   padding-bottom: 60px;
-  background: #fafbfd;
+  width: auto%;
   position: relative;
   margin: 0 auto;
   background: none;
@@ -16,12 +15,22 @@
   background-image: linear-gradient(#104da1, #0f4693);
 }
 
+.profile-content {
+  padding-top: 30px;
+  min-height: 420px;
+  width: 800px;
+  padding-left: 80px;
+  padding-right: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .inner-header {
   position: relative;
   padding-left: 80px;
   padding-right: 60px;
   margin: 0 auto;
-  width: 1000px;
+  width: 940px;
 }
 
 .user-info {
@@ -34,16 +43,6 @@
   position: relative;
   float: right;
   margin-top: 67px;
-}
-
-.profile-content {
-  padding-top: 30px;
-  min-height: 420px;
-  width: 1000px;
-  padding-left: 80px;
-  padding-right: 60px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .user-thumb {

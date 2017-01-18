@@ -132,14 +132,14 @@ class EssayDetail extends React.Component {
       return null;
     } else if (this.props.currentUser.id === this.props.profile.id) {
       return (
-        <div className="essay">
+        <div className="essay-block">
           {this.ownDetail()}
           {this.currentText()}
         </div>
       );
     } else {
       return (
-        <div className="essay">
+        <div className="essay-block">
           {this.normalDetail()}
           {this.normalText()}
         </div>
