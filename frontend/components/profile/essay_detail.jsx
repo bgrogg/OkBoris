@@ -1,12 +1,12 @@
 import React from 'react';
 
-class AboutAnswer extends React.Component {
+class EssayDetail extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      answerText: "",
-      previousText: "",
+      previousInput: "",
+      userInput: "",
       edit: false
     };
 
@@ -14,78 +14,81 @@ class AboutAnswer extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);
     this.handleCancel = this.handleCancel.bind(this);
-    this.userEditTitle = this.userEditTitle.bind(this);
-    this.normalTitle = this.normalTitle.bind(this);
-    this.userEditText = this.userEditText.bind(this);
+
+    this.ownDetail = this.ownDetail.bind(this);
+    this.normalDetail = this.normalDetail.bind(this);
+
+    this.editText = this.editText.bind(this);
     this.normalText = this.normalText.bind(this);
     this.currentText = this.currentText.bind(this);
   }
 
   componentDidMount() {
-    this.setState({ answerText: this.props.answerText });
+    this.setState({ userInput: this.props.userInput });
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({ answerText: nextProps.answerText });
+    this.setState({ userInput: nextProps.userInput });
   }
 
   handleClick(e) {
     e.preventDefault();
 
-    this.setState({ previousText: this.state.answerText, edit: true});
-  }
-
-  handleChange(e) {
-    this.setState({answerText: e.currentTarget.value});
+    this.setState({ previousInput: this.state.userInput, edit: true});
   }
 
   handleUpdate(e) {
     e.preventDefault();
 
-    const updatedInfo = { [this.props.dataName]: this.state.answerText };
-    const user = Object.assign({}, this.props.profile, updatedInfo);
+    const updatedDetail = { [this.props.detailName]: this.state.userInput };
+    const user = Object.assign({}, this.props.profile, updatedDetail);
     this.props.updateProfile(user)
-      .then(() => {
-        this.setState({ edit: false });
-      });
+    .then(() => {
+      this.setState({ edit: false });
+    });
   }
+
+  handleChange(e) {
+    this.setState({userInput: e.currentTarget.value});
+  }
+
 
   handleCancel(e) {
     e.preventDefault();
-    this.setState({ answerText: this.state.previousText, previousText: "", edit: false });
+    this.setState({ userInput: this.state.previousInput, previousInput: "", edit: false });
   }
 
-  userEditTitle() {
-    return(
-      <div>
-        <button className="about-button" onClick={ this.handleClick }>
-          <span className="about-title">{this.props.answerTitle}</span>
-          <span className="edit-pencil"></span>
-        </button>
-      </div>
-    );
-  }
-
-  normalTitle() {
+  normalDetail() {
     return (
       <div>
-        <div className="about-normal group">
-          <span className="about-title">{this.props.answerTitle}</span>
+        <div className="essay-normal group">
+          <span className="essay-title">{this.props.detailTitle}</span>
         </div>
       </div>
     );
   }
 
-  userEditText() {
+  ownDetail() {
+    return(
+      <div>
+        <button className="essay-button" onClick={ this.handleClick }>
+          <span className="essay-title">{this.props.detailTitle}</span>
+          <span className="essay-edit-pencil"></span>
+        </button>
+      </div>
+    );
+  }
+
+  editText() {
     return (
       <form className="edit-text">
 
         <textarea
+          className="edit-text-inside"
           type="text"
-          onChange={ this.handleChange }
           placeholder={ this.props.placeHolder }
-          value={ this.state.answerText }
-          className="inside-text"/>
+          onChange={ this.handleChange }
+          value={ this.state.userInput } />
 
         <input type="submit" value="Save" className="save-button" onClick={ this.handleUpdate }/>
         <input type="submit" value="Cancel" className="cancel-button" onClick={ this.handleCancel }/>
@@ -94,13 +97,13 @@ class AboutAnswer extends React.Component {
   }
 
   normalText() {
-    let placeHolderText = this.state.answerText;
+    let placeHolderText = this.state.userInput;
     let placeHolderBool = false;
 
-    if (!this.state.answerText) {
+    if (!this.state.userInput) {
       placeHolderText = this.props.placeHolder;
       placeHolderBool = true;
-    } else if (this.props.currentUser.id === this.props.profile.id && this.state.answerText.length === 0) {
+    } else if (this.props.currentUser.id === this.props.profile.id && this.state.userInput.length === 0) {
       placeHolderText = this.props.placeHolder;
       placeHolderBool = true;
     }
@@ -111,14 +114,14 @@ class AboutAnswer extends React.Component {
       );
     } else {
       return (
-        <div className="about-text">{ this.state.answerText }</div>
+        <div className="essay-text">{ this.state.userInput }</div>
       );
     }
   }
 
   currentText() {
     if (this.state.edit) {
-      return this.userEditText();
+      return this.editText();
     } else {
       return this.normalText();
     }
@@ -129,15 +132,15 @@ class AboutAnswer extends React.Component {
       return null;
     } else if (this.props.currentUser.id === this.props.profile.id) {
       return (
-        <div className="about-block">
-          {this.userEditTitle()}
+        <div className="essay">
+          {this.ownDetail()}
           {this.currentText()}
         </div>
       );
     } else {
       return (
-        <div className="about-block">
-          {this.normalTitle()}
+        <div className="essay">
+          {this.normalDetail()}
           {this.normalText()}
         </div>
       );
@@ -145,4 +148,4 @@ class AboutAnswer extends React.Component {
   }
 }
 
-export default AboutAnswer;
+export default EssayDetail;

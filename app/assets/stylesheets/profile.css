@@ -2,16 +2,16 @@
   width: 100%;
   padding-bottom: 60px;
   background: #fafbfd;
-  position: fixed;
   margin: 0 auto;
   background: none;
 }
 
 .profile-header {
   min-width: 940px;
-  width: 100%;
   padding-top: 50px;
   margin-bottom: 30px;
+  background-color: #104da1;
+  background-image: -webkit-linear-gradient(#104da1, #0f4693);
   background-image: linear-gradient(#104da1, #0f4693);
 }
 
@@ -20,7 +20,7 @@
   padding-left: 80px;
   padding-right: 60px;
   margin: 0 auto;
-  width: 100%;
+  width: 1000px;
 }
 
 .user-info {

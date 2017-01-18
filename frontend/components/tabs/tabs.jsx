@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutContainer from '../profile/about_container';
+import EssayContainer from '../profile/essay_container';
 
 class Tabs extends React.Component {
   constructor(props) {

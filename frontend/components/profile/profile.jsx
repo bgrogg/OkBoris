@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
-import AboutContainer from './about_container';
+import EssayContainer from './essay_container';
 import TabsContainer from '../tabs/tabs_container';
 
 class Profile extends React.Component {
@@ -88,7 +88,7 @@ class Profile extends React.Component {
             </div>
           </div>
           <TabsContainer
-            tabs={ [ <AboutContainer /> ] }
+            tabs={ [ <EssayContainer /> ] }
             tabNames={ ["About", "Questions"] }
             styling="profile-tabs"
             />

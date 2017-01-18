@@ -1,13 +1,12 @@
-.about-block {
-  margin-bottom: 45px;
+.essay {
+  margin-bottom: 40px;
   color: #474d59;
-  font-size: 16px;
 }
 
-.about-button {
+.essay-button {
   display: block;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: bolder;
   background: transparent;
   border: 0;
   padding: 0;
@@ -15,21 +14,31 @@
   margin-bottom: 6px;
 }
 
-.about-normal {
+.essay-normal {
   display: block;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: bolder;
   background: transparent;
   border: 0;
   padding: 0;
   margin-bottom: 6px;
 }
 
-.about-title {
+.essay-title {
   float: left;
 }
 
-.edit-pencil {
+.essay-edit-pencil:before {
+  display: block;
+  content: "";
+  margin-left: 14px;
+  margin-top: 10px;
+  background-image: image-url("pencil_edit_button.png");
+  height: 15px;
+  width: 15px;
+}
+
+.essay-edit-pencil {
   overflow: hidden;
   background: transparent;
   border: 0;
@@ -39,7 +48,7 @@
   height: 40px;
   color: #00d280;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 40px;
   vertical-align: top;
   position: relative;
@@ -47,25 +56,12 @@
   margin-bottom: -18px;
 }
 
-.edit-pencil:before {
-  display: block;
-  content: "";
-  background-image: image-url("pencil_edit_button.png");
-  height: 16px;
-  width: 16px;
-  margin-left: 14px;
-  margin-top: 14px;
-}
 
-.about-text {
+.essay-text {
+  font-size: 16px;
   display: block;
   margin-top: 14px;
-
-}
-
-.placeholder-text {
-  margin-top: 14px;
-  color: #ccd0d9;
+  font-weight: lighter;
 }
 
 .edit-text {
@@ -75,7 +71,12 @@
   margin: 20px 10px 0 0;
 }
 
-.inside-text {
+.placeholder-text {
+  margin-top: 14px;
+  color: #ccd0d9;
+}
+
+.edit-text-inside {
   border: 1px solid #ccd0d9;
   border-radius: 5px;
   padding: 20px;
@@ -84,22 +85,18 @@
   background: #fff;
 }
 
-.inside-text:focus {
-  border: 1px solid #9dbaf2;
-}
-
 .save-button {
   text-align: center;
-  height: 45px;
-  width: 110px;
+  font-weight: 400;
+  height: 42px;
+  width: 120px;
   border: 1px solid #ccd0d9;
   line-height: 44px;
-  font-size: 16px;
-  font-weight: 400;
   border-radius: 4px;
   margin-right: 10px;
   background-color: #00d280;
   color: #fff;
+  font-size: 16px;
   margin: 0 10px 0 0;
 
 }
@@ -110,8 +107,8 @@
 
 .cancel-button {
   text-align: center;
-  height: 45px;
-  width: 110px;
+  height: 42px;
+  width: 120px;
   border: 1px solid #ccd0d9;
   line-height: 44px;
   font-size: 16px;

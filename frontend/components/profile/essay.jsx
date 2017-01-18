@@ -1,7 +1,7 @@
 import React from 'react';
-import AboutAnswer from './about_answer';
+import EssayDetail from './essay_detail';
 
-class About extends React.Component {
+class Essay extends React.Component {
     constructor(props) {
       super(props);
     }
@@ -11,32 +11,32 @@ class About extends React.Component {
 
         return(
           <div className="profile-content">
-            <AboutAnswer
-              dataName="summary"
-              answerTitle="About me"
-              answerText={ this.props.profile.summary }
+            <EssayDetail
+              detailName="summary"
+              detailTitle="About me"
               currentUser={ this.props.currentUser }
+              userInput={ this.props.profile.summary }
               profile={ this.props.profile }
-              updateProfile={ this.props.updateProfile }
               placeHolder="Tell us a little about yourself."
-              />
-            <AboutAnswer
-              dataName="languages"
-              answerTitle="Preferred Languages"
-              answerText={ this.props.profile.languages }
-              currentUser={ this.props.currentUser }
-              profile={ this.props.profile }
               updateProfile={ this.props.updateProfile }
+              />
+            <EssayDetail
+              detailName="languages"
+              detailTitle="Preferred Languages"
+              currentUser={ this.props.currentUser }
+              userInput={ this.props.profile.languages }
+              profile={ this.props.profile }
               placeHolder="Which languages do you prefer to work in?"
-              />
-            <AboutAnswer
-              dataName="frameworks"
-              answerTitle="Preferred frameworks or environments"
-              answerText={ this.props.profile.frameworks}
-              currentUser={ this.props.currentUser }
-              profile={ this.props.profile }
               updateProfile={ this.props.updateProfile }
+              />
+            <EssayDetail
+              detailName="frameworks"
+              detailTitle="Preferred frameworks or environments"
+              currentUser={ this.props.currentUser }
+              userInput={ this.props.profile.frameworks}
+              profile={ this.props.profile }
               placeHolder="What are your preferred frameworks to work in?"
+              updateProfile={ this.props.updateProfile }
               />
           </div>
         );
@@ -46,4 +46,4 @@ class About extends React.Component {
     }
 }
 
-export default About;
+export default Essay;
