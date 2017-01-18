@@ -8,12 +8,12 @@ class Profile extends React.Component {
     super(props);
 
     this.state = {
-      imageFile: null,
-      imageUrl: null
+      imageUrl: null,
+      imageFile: null
     };
 
     this.handleImage = this.handleImage.bind(this);
-    this.profPic = this.profPic.bind(this);
+    this.profilePic = this.profilePic.bind(this);
   }
 
 
@@ -48,18 +48,18 @@ class Profile extends React.Component {
     }
   }
 
-  profPic() {
+  profilePic() {
     if (this.props.currentUser.id === this.props.profile.id) {
       return (
         <div>
-          <img className="prof-pic" src={this.state.imageUrl} ></img>
+          <img className="profile-pic" src={this.state.imageUrl} ></img>
           <label htmlFor="update-input" className="update-image-block">Update</label>
           <input id="update-input" type="file" onChange={ this.handleImage } />
         </div>
       );
     } else {
       return (
-        <img className="prof-pic non-user" src={this.state.imageUrl} ></img>
+        <img className="profile-pic non-user" src={this.state.imageUrl} ></img>
       );
     }
   }
@@ -74,7 +74,7 @@ class Profile extends React.Component {
             <div className="inner-header group">
               <div className="user-info group">
                 <div className="user-thumb">
-                  {this.profPic()}
+                  {this.profilePic()}
                 </div>
                 <div className="user-basics group">
                   <h2 className="user-name">

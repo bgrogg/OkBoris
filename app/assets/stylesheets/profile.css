@@ -2,6 +2,7 @@
   width: 100%;
   padding-bottom: 60px;
   background: #fafbfd;
+  position: relative;
   margin: 0 auto;
   background: none;
 }
@@ -64,7 +65,7 @@
   white-space: nowrap;
 }
 
-.prof-pic {
+.profile-pic {
   border-radius: 50%;
   background: #ccc;
   width: 180px;

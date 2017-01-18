@@ -26,7 +26,7 @@
   color: #6d9bf3;
 }
 
-.nav-prof-pic {
+.nav-profile-pic {
   margin-top: 10px;
   width: 45px;
   height: 45px;
@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-.nav-prof-pic:hover {
+.nav-profile-pic:hover {
   box-shadow: 0px 0px 5px #fff;
 }
 
