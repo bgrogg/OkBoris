@@ -16,16 +16,15 @@ class Profile extends React.Component {
 
 
   componentDidMount() {
-    this.props.fetchCurrentProfile(this.props.params.id)
+    this.props.fetchCurrentProfile(this.props.params.userId)
       .then(() => {
-        this.props.fetchResponses(this.props.profile.id);
         this.setState({ imageUrl: this.props.profile.image_file_name });
       });
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.params.id !== nextProps.params.id) {
-      this.props.fetchCurrentProfile(nextProps.params.id)
+    if (this.props.params.userId !== nextProps.params.userId) {
+      this.props.fetchCurrentProfile(nextProps.params.userId)
         .then(() => this.setState({ imageUrl: this.props.profile.image_file_name }));
     }
   }

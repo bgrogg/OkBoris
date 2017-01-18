@@ -6,5 +6,5 @@ json.looking_for @user.looking_for
 json.location @user.location
 json.summary @user.summary
 json.languages @user.languages
-json.frameworks @user.thinking
+json.frameworks @user.frameworks
 json.image_file_name asset_path(@user.image_file_name)

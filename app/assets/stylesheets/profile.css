@@ -1,0 +1,226 @@
+.profile-main {
+  width: 100%;
+  padding-bottom: 60px;
+  background: #fafbfd;
+  position: fixed;
+  margin: 0 auto;
+  background: none;
+}
+
+.profile-header {
+  min-width: 940px;
+  width: 100%;
+  padding-top: 50px;
+  margin-bottom: 30px;
+  background-image: linear-gradient(#104da1, #0f4693);
+}
+
+.inner-header {
+  position: relative;
+  padding-left: 80px;
+  padding-right: 60px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.user-info {
+  float: left;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.like-section {
+  position: relative;
+  float: right;
+  margin-top: 67px;
+}
+
+.profile-content {
+  padding-top: 30px;
+  min-height: 420px;
+  width: 1000px;
+  padding-left: 80px;
+  padding-right: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-thumb {
+  float: left;
+  position: relative;
+  z-index: 2;
+  width: 180px;
+  height: 180px;
+}
+
+.user-basics {
+  position: relative;
+  float: left;
+  margin-top: 37px;
+  margin-left: 8px;
+  padding: 12px;
+  padding-top: 8px;
+  max-width: 370px;
+  white-space: nowrap;
+}
+
+.prof-pic {
+  border-radius: 50%;
+  background: #ccc;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.non-user {
+  cursor: auto;
+}
+
+#update-input {
+  position: absolute;
+  left: -1000px;
+}
+
+.update-image-block {
+  position: absolute;
+  text-align: center;
+  height: 35px;
+  width: 110px;
+  top: 110px;
+  left: 35px;
+  z-index: 2;
+  opacity: 0;
+}
+
+.user-thumb:hover .update-image-block {
+  border-radius: 5px;
+  background: #3260c7;
+  color: #fff;
+  opacity: 1;
+  cursor: pointer;
+  line-height: 35px;
+}
+
+.user-thumb:hover .update-image-block:hover {
+  background: #4c7bd9;
+}
+
+.user-name {
+  color: #e4edfd;
+  font-weight: 300;
+  font-size: 34px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-details {
+  color: #e4edfd;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.profile-tabs-container {
+  border-bottom: 1px solid rgba(157,186,242,0.25);
+  margin: 0 20px;
+}
+
+.profile-tabs {
+  width: 1000px;
+  padding-left: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabs {
+  color: #474d59;
+  font-weight: bold;
+}
+
+.tabs > li {
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+  margin: 0 30px;
+  padding: 15px
+}
+
+.tabs > li:hover {
+  border-bottom: 3px solid #559cff;
+  color: #559cff;
+}
+
+.selected-li {
+  border-bottom: 3px solid #104da1;
+}
+
+
+.profile-actions {
+  float: right;
+  margin-top: 67px;
+  color: #e4edfd;
+}
+
+.profile-like-button {
+  border: 1px solid rgba(157,186,242,0.25);
+  border-radius: 5px;
+  height: 46px;
+  margin-right: 20px;
+  width: 130px;
+  text-align: center;
+}
+
+.profile-like-button:hover {
+  border: 1px solid rgba(228,237,253,0.75);
+}
+
+.profile-message-button {
+  background: #4c7bd9;
+  border: 1px solid rgba(157,186,242,0.25);
+  border-radius: 5px;
+  height: 46px;
+  width: 130px;
+  text-align: center;
+}
+
+.profile-message-button:hover {
+  background: #426abb;
+}
+
+.block {
+  display: block;
+  margin-top: 15px;
+  height: 25px;
+  width: 35px;
+  background: #d6e1f9;
+  border-radius: 25px;
+}
+
+.message-bubble {
+  position: relative;
+}
+
+.pointer {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-top: 10px solid #d6e1f9;
+  border-right: 10px solid transparent;
+  left: 22px;
+  bottom: -6px;
+}
+
+.message-bubble:hover > .block {
+  background: #f5f8ff;
+}
+
+.message-bubble:hover > .pointer {
+  border-top: 10px solid #f5f8ff;
+}
+
+.liked {
+  background: #efc417;
+}
