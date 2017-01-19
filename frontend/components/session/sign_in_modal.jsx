@@ -58,7 +58,7 @@ class SignInModal extends React.Component {
           <p className="sign-in-errors">{this.props.errors.base}</p>
 
           <input type="submit" value="Let's go" className="sign-in-button" />
-          <p className="sign-in-text">Sometimes I'll start a sentence and I don't even know where it's going. I just hope I find it along the way.</p>
+          <p className="sign-in-text">Sign in Text</p>
         </form>
       </div>
     );
