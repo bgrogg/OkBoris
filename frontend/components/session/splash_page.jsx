@@ -74,11 +74,9 @@ class SplashPage extends React.Component {
               Join the best free job dating site for employees of Dunder Mifflin.
             </div>
             <InitialRegistrationContainer />
-            <div className="smaller-caption">
-              {"You miss 100% of the shots you don't take - Wayne Gretzky"}
-              <div className="smallest caption">
-                {"-Michael Scott"}
-              </div>
+            <div className="small-caption">
+              {"You miss 100% of the shots you don't take. - Wayne Gretzky"}
+              <div className="smallest-caption">{"- Michael Scott"}</div>
             </div>
           </div>
         </div>
