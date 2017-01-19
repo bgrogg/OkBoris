@@ -83,6 +83,15 @@
   width: 660px;
 }
 
+.smallest-caption {
+  text-align: right;
+  font-weight: 300;
+  margin: 0 auto 30px;
+  font-size: 18px;
+  color: #9bb3e1;
+  width: 660px;
+}
+
 .final-caption {
   font-size: 14px;
   text-align: center;

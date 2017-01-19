@@ -40,7 +40,7 @@ class SplashPage extends React.Component {
   handleGuest(e) {
     e.preventDefault();
 
-    this.props.login({ username: "bigwig", password: "password"})
+    this.props.login({ username: "worldsbestboss", password: "password"})
       .then(user => {
         this.props.router.push('/');
       });
@@ -67,15 +67,18 @@ class SplashPage extends React.Component {
                 Guest Login
               </button>
             </div>
-            <h1 className="logo">OkBoris</h1>
+            <h1 className="logo">OkDunderMifflin</h1>
           </div>
           <div className="splash-bottom">
             <div className="tag-line">
-              Join the best free job hunting site in San Francisco
+              Join the best free job dating site for employees of Dunder Mifflin.
             </div>
             <InitialRegistrationContainer />
             <div className="smaller-caption">
-              {"Lorem ipsum dolor sit amet, primis ultrices. At quis praesent."}
+              {"You miss 100% of the shots you don't take - Wayne Gretzky"}
+              <div className="smallest caption">
+                {"-Michael Scott"}
+              </div>
             </div>
           </div>
         </div>
@@ -84,29 +87,29 @@ class SplashPage extends React.Component {
             <div className="image-box">
               <img></img>
               <p>
-                {"Recruiters: Find the perfect employee for your project!"}
+                {"Find your next date to the Dundies!"}
               </p>
             </div>
             <div className="image-box">
               <img></img>
               <p>
-                {"Jobseekers: Find the employer of your dreams!"}
+                {"No one goes home until Michael finds a date."}
               </p>
             </div>
             <div className="image-box">
               <img></img>
               <p>
-                {"Our matching algorithm is guaranteed to find you the perfect match!"}
+                {"May your dreams soar as high as your hats!"}
               </p>
             </div>
           </div>
         </div>
         <footer className="footer group">
           <p className="footer-copy-styling">
-            {"© OkBoris 2017"}
+            {"© OkDunderMifflin 2017"}
           </p>
           <p className="footer-disclosure-styling">
-            {"Full Disclosure: Something funny here"}
+            {"A Michael Scott Joint"}
           </p>
         </footer>
       </div>

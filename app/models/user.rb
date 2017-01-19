@@ -4,28 +4,32 @@
 #
 #  id              :integer          not null, primary key
 #  username        :string           not null
-#  email           :string           not null
 #  password_digest :string           not null
 #  session_token   :string           not null
 #  location        :string           not null
 #  summary         :text
-#  looking_for     :string
 #  profile_pic_id  :integer
 #  image_file_name :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  position        :string           not null
-#  languages       :text
-#  frameworks      :text
 #  latitude        :float
 #  longitude       :float
+#  gender          :string           not null
+#  orientation     :string           not null
+#  age             :string           not null
+#  life            :text
+#  skills          :text
+#  favorites       :text
+#  thinking        :text
+#  friday          :text
+#  msg_if          :text
 #
 
 class User < ActiveRecord::Base
-  validates :username, :password_digest, :session_token, :position, :email, presence: true
-  validates :username, :email, uniqueness: true
+  validates :username, :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :location, length: { is: 5 }
+  # validates :age, inclusion: { in: 18..100 }
 
   attr_reader :password
 

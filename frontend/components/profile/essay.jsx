@@ -13,7 +13,7 @@ class Essay extends React.Component {
           <div className="profile-content">
             <EssayDetail
               detailName="summary"
-              detailTitle="About me"
+              detailTitle="My self-summary"
               currentUser={ this.props.currentUser }
               userInput={ this.props.profile.summary }
               profile={ this.props.profile }
@@ -21,21 +21,57 @@ class Essay extends React.Component {
               updateProfile={ this.props.updateProfile }
               />
             <EssayDetail
-              detailName="languages"
-              detailTitle="Preferred Languages"
+              detailName="life"
+              detailTitle="What I'm doing with my life"
               currentUser={ this.props.currentUser }
-              userInput={ this.props.profile.languages }
+              userInput={ this.props.profile.life }
               profile={ this.props.profile }
-              placeHolder="Which languages do you prefer to work in?"
+              placeHolder="Don’t overthink this one; tell us what you’re doing day-to-day."
               updateProfile={ this.props.updateProfile }
               />
             <EssayDetail
-              detailName="frameworks"
-              detailTitle="Preferred frameworks or environments"
+              detailName="skills"
+              detailTitle="I'm really good at"
               currentUser={ this.props.currentUser }
-              userInput={ this.props.profile.frameworks}
+              userInput={ this.props.profile.skills}
               profile={ this.props.profile }
-              placeHolder="What are your preferred frameworks to work in?"
+              placeHolder="Go on, brag a little (or a lot). We won’t judge."
+              updateProfile={ this.props.updateProfile }
+              />
+            <EssayDetail
+              detailName="favorites"
+              detailTitle="Favorite books, movies, shows, music, and food"
+              currentUser={ this.props.currentUser }
+              userInput={ this.props.profile.favorites}
+              profile={ this.props.profile }
+              placeHolder="Help your potential matches find common interests."
+              updateProfile={ this.props.updateProfile }
+              />
+            <EssayDetail
+              detailName="thinking"
+              detailTitle="I spend a lot of time thinking about"
+              currentUser={ this.props.currentUser }
+              userInput={ this.props.profile.thinking}
+              profile={ this.props.profile }
+              placeHolder="Global warming, lunch, or your next vacation… it’s all fair game."
+              updateProfile={ this.props.updateProfile }
+              />
+            <EssayDetail
+              detailName="friday"
+              detailTitle="On a typical Friday night I am"
+              currentUser={ this.props.currentUser }
+              userInput={ this.props.profile.friday}
+              profile={ this.props.profile }
+              placeHolder="Netflix and takeout, or getting your party on — how do you let loose?"
+              updateProfile={ this.props.updateProfile }
+              />
+            <EssayDetail
+              detailName="msg_if"
+              detailTitle="You should message me if"
+              currentUser={ this.props.currentUser }
+              userInput={ this.props.profile.msg_if}
+              profile={ this.props.profile }
+              placeHolder="Offer a few tips to help matches win you over."
               updateProfile={ this.props.updateProfile }
               />
           </div>

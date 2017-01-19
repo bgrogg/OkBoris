@@ -6,11 +6,20 @@ const stageOne = props => (
       I am a
     </span>
     <select
-      onChange={props.update("position")}
-      value={props.position}
+      onChange={props.update("orientation")}
+      value={props.orientation}
       className="stage-one-button-container">
-      <option value="recruiter">Recruiter</option>
-      <option value="jobseeker">Jobseeker</option>
+      <option value="recruiter">Straight</option>
+      <option value="jobseeker">Gay</option>
+      <option value="jobseeker">Bisexual</option>
+    </select>
+
+    <select
+      onChange={props.update("gender")}
+      value={props.gender}
+      className="stage-one-button-container">
+      <option value="female">Female</option>
+      <option value="male">Male</option>
     </select>
 
     <input type="submit" value="Continue" className="continue-button" />

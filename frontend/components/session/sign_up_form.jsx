@@ -32,7 +32,8 @@ class SignUpForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    
+
+    this.props.regInfo.age = parseInt(this.props.regInfo.age);
     const user = Object.assign(Object.assign({}, this.state), this.props.userInfo);
 
     this.props.signup(user)

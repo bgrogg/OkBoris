@@ -13,8 +13,8 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User
-      .includes(:responses)
       .includes(:questions)
+      .includes(:responses)
       .find(params[:id])
 
     if @user
@@ -57,10 +57,16 @@ class Api::UsersController < ApplicationController
       :email,
       :location,
       :summary,
-      :looking_for,
-      :profile_pic_id,
       :image_file_name,
-      :position
+      :gender,
+      :orientation,
+      :age,
+      :life,
+      :skills,
+      :favorites,
+      :thinking,
+      :friday,
+      :msg_if
     )
   end
 end

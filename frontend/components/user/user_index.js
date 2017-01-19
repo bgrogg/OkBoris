@@ -13,7 +13,7 @@ class UserIndex extends Component {
     this.display = this.display.bind(this);
     this.sortedUsers = this.sortedUsers.bind(this);
     this.userIndexItems = this.userIndexItems.bind(this);
-    this.positionSeeking = this.positionSeeking.bind(this);
+    this.orientationPreference = this.orientationPreference.bind(this);
     this.preferences = this.preferences.bind(this);
     this.distanceOptions = this.distanceOptions.bind(this);
     this.handleDistance = this.handleDistance.bind(this);
@@ -29,26 +29,60 @@ class UserIndex extends Component {
     this.props.fetchQuestions();
   }
 
-  positionSeeking(user) {
-    if (this.props.currentUser.position === "jobseeker") {
-      return this.props.users[user.user].position === "recruiter";
+  orientationPreference(user) {
+    if (this.props.currentUser.orientation === "straight" && this.props.currentUser.gender === "male") {
+      return (
+        this.props.users[user.user].gender === "female" &&
+        this.props.users[user.user].orientation !== "gay"
+      );
+    } else if (this.props.currentUser.orientation === "straight") {
+      return (
+        this.props.users[user.user].gender === "male" &&
+        this.props.users[user.user].orientation !== "gay"
+      );
+    } else if (this.props.currentUser.orientation === "gay" && this.props.currentUser.gender === "male") {
+      return (
+        this.props.users[user.user].gender === "male" &&
+        this.props.users[user.user].gender !== "straight"
+      );
+    } else if (this.props.currentUser.orientation === "gay") {
+      return (
+        this.props.users[user.user].gender === "female" &&
+        this.props.users[user.user].orientation !== "straight"
+      );
+    } else if (this.props.currentUser.orientation === "bisexual" && this.props.currentUser.gender === "male"){
+      return (
+        (this.props.users[user.user].gender === "female" && this.props.users[user.user].orientation === "straight") ||
+        (this.props.users[user.user].gender === "male" && this.props.users[user.user].orientation === "gay") ||
+        (this.props.users[user.user].orientation === "bisexual")
+      );
     } else {
-      return this.props.users[user.user].position === "jobseeker";
+      return (
+        (this.props.users[user.user].gender === "female" && this.props.users[user.user].orientation === "gay") ||
+        (this.props.users[user.user].gender === "male" && this.props.users[user.user].orientation === "straight") ||
+        (this.props.users[user.user].orientation === "bisexual")
+      );
     }
   }
 
   preferences() {
-    let seeking;
+    let gender;
 
-    if (this.props.currentUser.position === "recruiter") {
-      seeking = "jobseeker";
+    if (this.props.currentUser.orientation === "straight" && this.props.currentUser.gender === "male") {
+      gender = "women";
+    } else if (this.props.currentUser.orientation === "straight") {
+      gender = "men";
+    } else if (this.props.currentUser.orientation === "gay" && this.props.currentUser.gender === "female") {
+      gender = "men";
+    } else if (this.props.currentUser.orientation === "gay") {
+      gender = "women";
     } else {
-      seeking = "recruiter";
+      gender = "both men and women";
     }
 
     return (
       <div className="preferences-bar">
-        <p className="browse-large">Searching for "{seeking}s" within {this.distanceOptions()} miles from you.</p>
+        <p className="browse-large">Searching for "{gender}" within {this.distanceOptions()} miles from you.</p>
       </div>
     );
 
@@ -59,7 +93,7 @@ class UserIndex extends Component {
       const matchPercentage = this.findMatchPercentage(this.props.users[user]);
       return { user, matchPercentage };
     }).filter(user =>
-      this.positionSeeking(user)
+      this.orientationPreference(user)
     );
   }
 

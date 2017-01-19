@@ -10,10 +10,10 @@ class InitialRegistration extends React.Component {
     super(props);
     this.state = {
       regStage: 0,
-      email: "",
       location: "",
-      looking_for: "full-time",
-      position: "recruiter"
+      gender: "female",
+      orientation: "straight",
+      age: ""
     };
 
     this.handleFirstStage = this.handleFirstStage.bind(this);
@@ -29,7 +29,8 @@ class InitialRegistration extends React.Component {
     e.preventDefault();
 
     this.setState({
-      position: this.state.position,
+      orientation: this.state.orientation,
+      gender: this.state.gender,
       regStage: 1
     });
   }
@@ -38,9 +39,8 @@ class InitialRegistration extends React.Component {
     e.preventDefault();
 
     this.setState({
-      email: this.state.email,
       location: this.state.location,
-      looking_for: this.state.looking_for,
+      age: this.state.age,
       regStage: 2,
     });
   }
@@ -53,24 +53,25 @@ class InitialRegistration extends React.Component {
         <StageOne
           submit={ this.handleFirstStage }
           update={ this.update }
-          position={ this.state.position } />
+          gender={ this.state.gender }
+          orientation={ this.state.orientation } />
       );
     } else if (this.state.regStage === 1) {
       currentForm = (
         <StageTwo
           submit={ this.handleSecondStage }
           update={ this.update }
-          email={ this.state.email }
+          age={ this.state.age }
           location={ this.state.location }
           looking_for={ this.state.looking_for } />
       );
     } else if (this.state.regStage === 2) {
 
       const userInfo = {
-        position: this.state.position,
-        email: this.state.email,
+        orientation: this.state.orientation,
+        age: this.state.age,
         location: this.state.location,
-        looking_for: this.state.looking_for
+        gender: this.state.gender
       };
 
       currentForm = (

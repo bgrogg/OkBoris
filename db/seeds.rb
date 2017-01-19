@@ -22,87 +22,122 @@ c2 = Choice.create(question_id: q1.id, body: "No", order: 2)
 #seed users
 
 user1 = User.create!(
-  username: "borisgrogg",
-  email: "fakeemail@example.com",
+  username: "worldsbestboss",
   password: "password",
   location: "94109",
   summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
            dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
            magna dictum eros, ante et integer nulla, id egestas, metus
            velit, eu tincidunt orci velit pulvinar sapien.",
-  looking_for: "full-time",
-  languages: "Ruby, Javascript",
-  profile_pic_id: 1,
   image_file_name: "default_profile.png",
-  frameworks: "Rails, React",
-  position: "jobseeker"
+  gender: "male",
+  orientation: "straight",
+  age: "41",
+  life: "Apple elevator fried tomatoes going hardly outside of the ball.",
+  skills: "Seven archipelago wonder if Natasha optimize tuscan.",
+  favorites: "Senior billy home start up and down the washing machine.",
+  thinking: "All of my prunes are water bottle enamel horoscope.",
+  friday: "Even if computer bobby tables default knickerboxers.",
+  msg_if: "Wait aesthetics believe management clean the cells."
 )
 
 user2 = User.create!(
-  username: "b0risgr0gg",
-  email: "doppelganger@gmail.com",
+  username: "thefireguy",
   password: "password",
-  location: "94105",
+  location: "94001",
   summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
            dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
-           magna dictum eros, ante et integer nulla, id egestas, metus
-           velit, eu tincidunt orci velit pulvinar sapien.",
-  looking_for: "part-time",
-  languages: "Swift, Objective-C",
-  profile_pic_id: 2,
+           magna dictum eros, ante et integer nulla.",
   image_file_name: "default_profile.png",
-  frameworks: "Foundation, UIKit, CloudKit",
-  position: "jobseeker"
+  gender: "male",
+  orientation: "straight",
+  age: "27",
+  life: "Apple elevator fried tomatoes going hardly outside of the ball.",
+  skills: "Seven archipelago wonder if Natasha optimize tuscan.",
+  favorites: "Senior billy home start up and down the washing machine.",
+  thinking: "All of my prunes are water bottle enamel horoscope.",
+  friday: "Even if computer bobby tables default knickerboxers.",
+  msg_if: "Wait aesthetics believe management clean the cells."
 )
 
 user3 = User.create!(
-  username: "notBoris",
-  email: "twins@gmail.com",
+  username: "Beesly",
   password: "password",
   location: "94105",
   summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
            dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
            magna dictum eros, ante et integer nulla, id egestas, metus
            velit, eu tincidunt orci velit pulvinar sapien.",
-  looking_for: "hourly",
-  languages: "C++, C#",
-  profile_pic_id: 3,
   image_file_name: "default_profile.png",
-  frameworks: ".NET, Rails",
-  position: "jobseeker"
+  gender: "female",
+  orientation: "straight",
+  age: "32",
+  life: "Apple elevator fried tomatoes going hardly outside of the ball.",
+  skills: "Seven archipelago wonder if Natasha optimize tuscan.",
+  favorites: "Senior billy home start up and down the washing machine.",
+  thinking: "All of my prunes are water bottle enamel horoscope.",
+  friday: "Even if computer bobby tables default knickerboxers.",
+  msg_if: "Wait aesthetics believe management clean the cells."
 )
 
 user4 = User.create!(
-  username: "bigwig",
-  email: "bigwig@gmail.com",
+  username: "catlover44",
+  password: "password",
+  location: "94105",
+  summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
+           dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
+           magna dictum eros, ante et integer nulla, id egestas, metus
+           velit, eu tincidunt orci velit pulvinar sapien.",
+  image_file_name: "default_profile.png",
+  gender: "female",
+  orientation: "straight",
+  age: "35",
+  life: "Apple elevator fried tomatoes going hardly outside of the ball.",
+  skills: "Seven archipelago wonder if Natasha optimize tuscan.",
+  favorites: "Senior billy home start up and down the washing machine.",
+  thinking: "All of my prunes are water bottle enamel horoscope.",
+  friday: "Even if computer bobby tables default knickerboxers.",
+  msg_if: "Wait aesthetics believe management clean the cells."
+)
+
+user5 = User.create!(
+  username: "actually",
   password: "password",
   location: "94109",
   summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
            dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
            magna dictum eros, ante et integer nulla, id egestas, metus
            velit, eu tincidunt orci velit pulvinar sapien.",
-  looking_for: "full-time",
-  languages: "Ruby, Javascript",
-  profile_pic_id: 4,
   image_file_name: "default_profile.png",
-  frameworks: "React, Rails",
-  position: "recruiter"
+  gender: "male",
+  orientation: "gay",
+  age: "48",
+  life: "Apple elevator fried tomatoes going hardly outside of the ball.",
+  skills: "Seven archipelago wonder if Natasha optimize tuscan.",
+  favorites: "Senior billy home start up and down the washing machine.",
+  thinking: "All of my prunes are water bottle enamel horoscope.",
+  friday: "Even if computer bobby tables default knickerboxers.",
+  msg_if: "Wait aesthetics believe management clean the cells."
 )
 
-user5 = User.create!(
-  username: "gorisbrogg",
-  email: "notme@gmail.com",
+user6 = User.create!(
+  username: "Creed",
   password: "password",
-  location: "94109",
+  location: "94105",
   summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
+           dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
            magna dictum eros, ante et integer nulla, id egestas, metus
            velit, eu tincidunt orci velit pulvinar sapien.",
-  looking_for: "hourly",
-  languages: "Java",
-  profile_pic_id: 5,
   image_file_name: "default_profile.png",
-  frameworks: "Angular",
-  position: "jobseeker"
+  gender: "male",
+  orientation: "bisexual",
+  age: "63",
+  life: "Apple elevator fried tomatoes going hardly outside of the ball.",
+  skills: "Seven archipelago wonder if Natasha optimize tuscan.",
+  favorites: "Senior billy home start up and down the washing machine.",
+  thinking: "All of my prunes are water bottle enamel horoscope.",
+  friday: "Even if computer bobby tables default knickerboxers.",
+  msg_if: "Wait aesthetics believe management clean the cells."
 )
 
 r1 = Response.create(

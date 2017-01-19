@@ -23,7 +23,7 @@ class NavBar extends React.Component {
         <nav className="nav-bar">
           <div>
             <h1 className="nav-logo">
-              <a href="/">okb</a>
+              <a href="/">okDM</a>
             </h1>
             <ul className="nav-left group">
               <li className="nav-left-link">

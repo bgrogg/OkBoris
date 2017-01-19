@@ -1,12 +1,10 @@
 json.id user.id
 json.username user.username
-json.email user.email
 json.location user.location
-json.position user.position
 json.image_file_name asset_path(user.image_file_name)
-json.looking_for user.looking_for
 json.summary user.summary
-json.languages user.languages
-json.frameworks user.frameworks
 json.responses user.responses
 json.questions user.questions
+json.age user.age
+json.gender user.gender
+json.orientation user.orientation

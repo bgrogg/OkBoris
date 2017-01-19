@@ -32,7 +32,7 @@ class UserIndexItem extends Component {
           <img src={this.props.user.image_file_name} className="browse-pic" onClick={ this.handleProfile }></img>
           <div className="browse-text">
             <p className="username-text">{this.props.user.username}</p>
-            <p className="user-browse-info">{this.props.user.location}</p>
+            <p className="user-browse-info">{this.props.user.age} · {this.props.user.location}</p>
             <p className={"match-percentage" + this.matchColor()}>{this.props.matchPercentage}% Match</p>
           </div>
         </div>
