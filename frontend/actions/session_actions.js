@@ -25,7 +25,9 @@ export const requestLogin = user => dispatch => {
 
 export const requestLogout = () => dispatch => {
   return logout().then(
-    () => dispatch(receiveLogoutSuccess())
+    () => dispatch(receiveCurrentUser(null))
+  ).fail(
+    error => dispatch(receiveErrors(error.responseJSON))
   );
 };
 

@@ -14,7 +14,7 @@ user1 = User.create!(
   username: "borisgrogg",
   email: "fakeemail@example.com",
   password: "password",
-  location: "Nob Hill",
+  location: "94109",
   summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
            dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
            magna dictum eros, ante et integer nulla, id egestas, metus
@@ -31,7 +31,7 @@ user2 = User.create!(
   username: "b0risgr0gg",
   email: "doppelganger@gmail.com",
   password: "password",
-  location: "Mission",
+  location: "94105",
   summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
            dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
            magna dictum eros, ante et integer nulla, id egestas, metus
@@ -48,7 +48,7 @@ user3 = User.create!(
   username: "notBoris",
   email: "twins@gmail.com",
   password: "password",
-  location: "Downtown",
+  location: "94105",
   summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
            dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
            magna dictum eros, ante et integer nulla, id egestas, metus
@@ -65,7 +65,7 @@ user4 = User.create!(
   username: "bigwig",
   email: "bigwig@gmail.com",
   password: "password",
-  location: "Downtown",
+  location: "94109",
   summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
            dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
            magna dictum eros, ante et integer nulla, id egestas, metus
@@ -82,7 +82,7 @@ user5 = User.create!(
   username: "gorisbrogg",
   email: "notme@gmail.com",
   password: "password",
-  location: "Mission",
+  location: "94109",
   summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
            magna dictum eros, ante et integer nulla, id egestas, metus
            velit, eu tincidunt orci velit pulvinar sapien.",

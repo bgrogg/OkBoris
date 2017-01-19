@@ -10,18 +10,13 @@ const StageTwo = props => (
       placeholder="Email"
       className="stage-two-box"/><br></br>
 
-    <span className="splash-text">
-      I am located in
-    </span>
-    <select
+    <label className="stage-two-label">Zip Code</label>
+    <input type="text"
+      value={props.location}
       onChange={props.update("location")}
-      value={props.position}
-      className="stage-two-button-container">
-      <option value="mission">Mission</option>
-      <option value="nob-hill">Nob Hill</option>
-      <option value="downtown">Downtown</option>
-    </select><br></br>
-
+      placeholder="e.g. 94105"
+      className="stage-two-box"/>
+    <p className="reg-errors">{props.zip_errors}</p><br></br>
 
     <span className="splash-text">
       and am seeking a

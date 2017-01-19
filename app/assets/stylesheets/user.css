@@ -109,12 +109,15 @@
 
 .sort-dropdown {
   margin-left: 10px;
+  margin-right: 10px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 120px;
-  height: 30px;
+  width: 70px;
+  height: 25px;
   padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'Open Sans';
 }
 
 .user-index-container {

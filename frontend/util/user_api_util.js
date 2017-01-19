@@ -1,7 +1,8 @@
-export const fetchUsers = () => {
+export const fetchUsers = (distance) => {
   return $.ajax({
       method: 'GET',
-      url: 'api/users'
+      url: 'api/users',
+      data: { distance }
   });
 };
 

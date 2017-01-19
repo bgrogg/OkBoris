@@ -33,8 +33,14 @@ class Api::UsersController < ApplicationController
   end
 
   def index
-    @users = User.all
-    @users
+    @users = current_user.find_users_within(params[:distance])
+      .where("username != ?", current_user.username)
+
+    if @users
+      render :index
+    else
+      render json: @users.errors, status: 422
+    end
   end
 
   private

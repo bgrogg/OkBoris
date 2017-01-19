@@ -7,7 +7,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 // react components
 import App from './app';
 import InitialRegistration from './session/initial_reg';
-import RegPageContainer from './session/reg_page_container';
+import SplashPageContainer from './session/splash_page_container';
 import UserIndexContainer from './user/user_index_container';
 import ProfileContainer from './profile/profile_container';
 
@@ -33,7 +33,7 @@ const Root = ({ store }) => {
         <Route path="/" component={App}>
           <IndexRoute component={ UserIndexContainer } onEnter={ _ensureLoggedIn }/>
           <Route path="/profile/:userId" component={ ProfileContainer } onEnter={ _ensureLoggedIn } />
-          <Route path='/signup' component={ RegPageContainer } onEnter={ _redirectIfLoggedIn } />
+          <Route path='/signup' component={ SplashPageContainer } onEnter={ _redirectIfLoggedIn } />
       </Route>
       </Router>
     </Provider>

@@ -10,23 +10,34 @@
 #  location        :string           not null
 #  summary         :text
 #  looking_for     :string
-#  languages       :string
 #  profile_pic_id  :integer
 #  image_file_name :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  frameworks      :string
+#  position        :string           not null
+#  languages       :text
+#  frameworks      :text
+#  latitude        :float
+#  longitude       :float
 #
 
 class User < ActiveRecord::Base
   validates :username, :password_digest, :session_token, :position, :email, presence: true
   validates :username, :email, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
+  validates :location, length: { is: 5 }
 
   attr_reader :password
 
   after_initialize :ensure_session_token
   before_validation :ensure_session_token_uniqueness
+  geocoded_by :location
+  after_validation :geocode, if: ->(obj) { obj.location.present? && obj.location_changed? }
+
+  acts_as_mappable default_units: :miles,
+                   distance_field_name: :distance,
+                   lat_column_name: :latitude,
+                   lng_column_name: :longitude
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
@@ -48,6 +59,10 @@ class User < ActiveRecord::Base
     ensure_session_token_uniqueness
     self.save
     self.session_token
+  end
+
+  def find_users_within(miles)
+    User.within(miles, origin: self)
   end
 
   private

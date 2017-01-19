@@ -11,7 +11,7 @@ class InitialRegistration extends React.Component {
     this.state = {
       regStage: 0,
       email: "",
-      location: "mission",
+      location: "",
       looking_for: "full-time",
       position: "recruiter"
     };

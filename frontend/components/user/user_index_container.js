@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchUsers: () => dispatch(fetchUsers())
+  fetchUsers: (distance) => dispatch(fetchUsers(distance))
 });
 
 export default connect (
