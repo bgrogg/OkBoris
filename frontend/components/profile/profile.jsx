@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router';
 import EssayContainer from './essay_container';
 import TabsContainer from '../tabs/tabs_container';
+import QuestionsContainer from '../question/questions_container';
 
 class Profile extends React.Component {
   constructor(props) {
@@ -20,8 +21,10 @@ class Profile extends React.Component {
   componentDidMount() {
     this.props.fetchCurrentProfile(this.props.params.userId)
       .then(() => {
+        this.props.fetchResponses(this.props.profile.id);
         this.setState({ imageUrl: this.props.profile.image_file_name });
       });
+    this.props.fetchQuestions();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -88,7 +91,7 @@ class Profile extends React.Component {
             </div>
           </div>
           <TabsContainer
-            tabs={ [ <EssayContainer /> ] }
+            tabs={ [ <EssayContainer />, <QuestionsContainer questions={this.props.questions }/> ] }
             tabNames={ ["About", "Questions"] }
             styling="profile-tabs"
             />

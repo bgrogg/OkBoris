@@ -39,6 +39,17 @@ class User < ActiveRecord::Base
                    lat_column_name: :latitude,
                    lng_column_name: :longitude
 
+
+  has_many :responses
+
+  has_many :choices,
+    through: :responses,
+    source: :choice
+
+  has_many :questions,
+    through: :responses,
+    source: :question
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil unless user

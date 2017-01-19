@@ -8,3 +8,5 @@ json.looking_for user.looking_for
 json.summary user.summary
 json.languages user.languages
 json.frameworks user.frameworks
+json.responses user.responses
+json.questions user.questions

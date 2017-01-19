@@ -6,6 +6,7 @@ class UserIndexItem extends Component {
     super(props);
 
   this.handleProfile = this.handleProfile.bind(this);
+  this.matchColor = this.matchColor.bind(this);
   }
 
   handleProfile(e) {
@@ -13,6 +14,16 @@ class UserIndexItem extends Component {
 
     this.props.router.push(`/profile/${this.props.user.id}`);
   }
+
+  matchColor() {
+  if (this.props.matchPercentage > 60) {
+    return " green";
+  } else if (this.props.matchPercentage > 40) {
+    return " orange";
+  } else {
+    return " red";
+  }
+}
 
   render() {
     return (
@@ -22,6 +33,7 @@ class UserIndexItem extends Component {
           <div className="browse-text">
             <p className="username-text">{this.props.user.username}</p>
             <p className="user-browse-info">{this.props.user.location}</p>
+            <p className={"match-percentage" + this.matchColor()}>{this.props.matchPercentage}% Match</p>
           </div>
         </div>
       </div>

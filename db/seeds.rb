@@ -7,6 +7,17 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.destroy_all
+Question.destroy_all
+Choice.destroy_all
+Response.destroy_all
+
+#seed questions and choices
+
+
+q1 = Question.create(title: "Is this what a placeholder question looks like?")
+
+c1 = Choice.create(question_id: q1.id, body: "Yes", order: 1)
+c2 = Choice.create(question_id: q1.id, body: "No", order: 2)
 
 #seed users
 
@@ -92,4 +103,12 @@ user5 = User.create!(
   image_file_name: "default_profile.png",
   frameworks: "Angular",
   position: "jobseeker"
+)
+
+r1 = Response.create(
+  choice_id: 2,
+  user_id: 1,
+  acceptable_choices: c2.body,
+  importance: 50,
+  explanation: "Testing"
 )

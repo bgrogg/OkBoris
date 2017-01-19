@@ -43,9 +43,9 @@ class EssayDetail extends React.Component {
     const updatedDetail = { [this.props.detailName]: this.state.userInput };
     const user = Object.assign({}, this.props.profile, updatedDetail);
     this.props.updateProfile(user)
-    .then(() => {
-      this.setState({ edit: false });
-    });
+      .then(() => {
+        this.setState({ edit: false });
+      });
   }
 
   handleChange(e) {

@@ -17,12 +17,16 @@ class UserIndex extends Component {
     this.preferences = this.preferences.bind(this);
     this.distanceOptions = this.distanceOptions.bind(this);
     this.handleDistance = this.handleDistance.bind(this);
+    this.findMatchPercentage = this.findMatchPercentage.bind(this);
+    this.calculateQuestionImportance = this.calculateQuestionImportance.bind(this);
+    this.calculateQuestionScore = this.calculateQuestionScore.bind(this);
   }
 
 
   componentDidMount() {
     this.props.fetchUsers(this.state.distance);
     this.setState({ distance: 3000 });
+    this.props.fetchQuestions();
   }
 
   positionSeeking(user) {
@@ -52,7 +56,8 @@ class UserIndex extends Component {
 
   sortedUsers() {
     return Object.keys(this.props.users).map(user => {
-      return { user };
+      const matchPercentage = this.findMatchPercentage(this.props.users[user]);
+      return { user, matchPercentage };
     }).filter(user =>
       this.positionSeeking(user)
     );
@@ -69,11 +74,99 @@ class UserIndex extends Component {
         <li key={ user.user }>
           <UserIndexItem
             currentUser={ this.props.currentUser }
+            matchPercentage={ user.matchPercentage }
             user={ this.props.users[user.user] } />
         </li>
       );
     });
     return matches;
+  }
+
+  findMatchPercentage(user) {
+    let currentUserPoints = 0;
+    let currentUserQuestionTotal = 0;
+    let otherUserPoints = 0;
+    let otherUserQuestionTotal = 0;
+
+    const userQuestions = this.props.currentUser.questions.map((question) => {
+      return question.id;
+    });
+
+    const otherUserQuestions = user.questions.map((question) => {
+      return question.id;
+    });
+
+    const commonQuestions = Object.keys(this.props.questions).map((question) => {
+      if (userQuestions.includes(parseInt(question)) && otherUserQuestions.includes(parseInt(question))) {
+        return this.props.questions[question];
+      }
+    }).filter((question) => question !== undefined);
+
+    if (commonQuestions.length === 0) {
+      return 0;
+    }
+
+    commonQuestions.forEach((question) => {
+      currentUserPoints += this.calculateQuestionScore(question, this.props.currentUser, user);
+      currentUserQuestionTotal += this.calculateQuestionImportance(question, this.props.currentUser);
+      otherUserPoints += this.calculateQuestionScore(question, user, this.props.currentUser);
+      otherUserQuestionTotal += this.calculateQuestionImportance(question, user);
+    });
+
+    const currentUserPercent = (currentUserPoints / currentUserQuestionTotal);
+    const otherUserPercent = (otherUserPoints / otherUserQuestionTotal);
+
+    const multiplied = currentUserPercent * otherUserPercent;
+    const root = commonQuestions.length;
+    let matchPercent = Math.floor((Math.sqrt(multiplied) - (1 / (2 * root))) * 100);
+
+    if (matchPercent < 0) {
+      matchPercent = 0;
+    }
+    return matchPercent;
+  }
+
+  calculateQuestionImportance(question, user) {
+    let questionImportance = 0;
+    const choices = question.choices.map((choice) => choice.id);
+
+    user.responses.forEach((response) => {
+      if (choices.includes(response.choice_id)) {
+        questionImportance = response.importance;
+      }
+    });
+
+    return questionImportance;
+  }
+
+  calculateQuestionScore(question, user, otherUser) {
+    const choices = question.choices;
+    const choiceIds = question.choices.map((choice) => choice.id);
+    let otherUserChoices = null;
+    let userAcceptables = null;
+    let userImportance = 0;
+
+    choices.forEach((choice) => {
+      otherUser.responses.forEach((response) => {
+        if (response.choice_id === choice.id) {
+          otherUserChoices = choice.body;
+        }
+      });
+    });
+
+    user.responses.forEach((response) => {
+      if (choiceIds.includes(response.choice_id)) {
+        userAcceptables = response.acceptable_choices;
+        userImportance = response.importance;
+      }
+    });
+
+    if (userAcceptables.includes(otherUserChoices)) {
+      return userImportance;
+    } else {
+      return 0;
+    }
+
   }
 
   distanceOptions() {
