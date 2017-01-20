@@ -58,7 +58,7 @@ class SignInModal extends React.Component {
           <p className="sign-in-errors">{this.props.errors.base}</p>
 
           <input type="submit" value="Let's go" className="sign-in-button" />
-          <p className="sign-in-text">Good to see you again!</p>
+          <p className="sign-in-text">Hint: Try 'password' for any other user.</p>
         </form>
       </div>
     );

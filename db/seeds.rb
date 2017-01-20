@@ -118,7 +118,7 @@ user3 = User.create!(
   username: "dundermifflinthisispam",
   password: "password",
   location: "94105",
-  summary: "They have new phone systems now that can ring directly to a salesman. Basically 95% of my job. But I'd like to see a machine that puts out candy for everyone.",
+  summary: "I hate the idea that someone out there hates me. I even hate thinking that AL-Qaeda hates me. I think if they got to know me they wouldn't hate me.",
   image_file_name: "http://res.cloudinary.com/dnpcubtwv/image/upload/v1484885590/office_avatars/pambeesly.jpg",
   gender: "female",
   orientation: "straight",
@@ -126,9 +126,9 @@ user3 = User.create!(
   life: "Receptionist at Dunder Mifflin, Scranton. It's not really my dream job so I'm saving up for art school.",
   skills: "Drawing, making photocopies, keeping it fresh with my white keds.",
   favorites: "Food: Mixed berry yogurt. Movie: Dazed and Confused.",
-  thinking: "I hate the idea that someone out there hates me. I even hate thinking that AL-Qaeda hates me. I think if they got to know me they wouldn't hate me.",
+  thinking: "They have new phone systems now that can ring directly to a salesman. Basically 95% of my job. But I'd like to see a machine that puts out candy for everyone.",
   friday: "Getting my Netflix on.",
-  msg_if: "If you're gonna be my boyfriend, you have to do boyfriend things."
+  msg_if: "You wanto to talk about my art."
 )
 
 user4 = User.create!(
