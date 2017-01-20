@@ -174,12 +174,18 @@
 }
 
 .username-text {
-  color: #474d59;
+  color: #5e6573;
   font-size: 22px;
   width: 100%;
   position: relative;
   display: inline-block;
   margin-bottom: 5px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.username-text:hover {
+  color: #474d59;
+  cursor: pointer;
 }
 
 .user-browse-info {
