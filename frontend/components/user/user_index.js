@@ -80,9 +80,14 @@ class UserIndex extends Component {
       gender = "both men and women";
     }
 
+    let ownGender;
+
+    if (this.props.currentUser.gender === "female") { ownGender = "women"; }
+    if (this.props.currentUser.gender === "male") { ownGender = "men"; }
+
     return (
       <div className="preferences-bar">
-        <p className="browse-large">Searching for "{gender}" within {this.distanceOptions()} miles from you.</p>
+        <p className="browse-large">Searching for "{gender}" seeking "{ownGender}" within {this.distanceOptions()} miles from you.</p>
       </div>
     );
 
