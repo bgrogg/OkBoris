@@ -83,21 +83,21 @@ class SplashPage extends React.Component {
         <div className="bottom-section group">
           <div className="image-container group">
             <div className="image-box">
-              <img></img>
+              <img src="http://res.cloudinary.com/dnpcubtwv/image/upload/v1484904632/office_avatars/trophy_2_2.png"></img>
               <p>
                 {"Find your next date to the Dundies!"}
               </p>
             </div>
             <div className="image-box">
-              <img></img>
+              <img src="http://res.cloudinary.com/dnpcubtwv/image/upload/c_scale,h_116,w_104/v1484905297/office_avatars/couple_2.jpg"></img>
               <p>
-                {"No one goes home until Michael finds a date."}
+                {"Love could be just a few cubicles away."}
               </p>
             </div>
             <div className="image-box">
-              <img></img>
+              <img src="http://res.cloudinary.com/dnpcubtwv/image/upload/c_scale,h_116,w_104/v1484904069/office_avatars/hearts.jpg"></img>
               <p>
-                {"May your dreams soar as high as your hats!"}
+                {"No one goes home until Michael finds a date."}
               </p>
             </div>
           </div>
