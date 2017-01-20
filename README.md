@@ -4,7 +4,7 @@
 
 OkDunderMifflin is a personal project by Boris Grogg.
 
-![Home Page](/Users/borisgrogg/desktop/okboris/docs/images/HomePage.png)
+![Home Page](/docs/images/HomePage.png)
 
 ## Features
 
@@ -15,7 +15,7 @@ OkDunderMifflin is a personal project by Boris Grogg.
 * Answer more questions to improve your match ratings
 * Message other users (coming soon!)
 
-![Browse Users](/Users/borisgrogg/desktop/okboris/docs/images/BrowsePage.png)
+![Browse Users](/docs/images/BrowsePage.png)
 
 ## Project Design
 
