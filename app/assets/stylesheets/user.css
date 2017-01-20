@@ -126,6 +126,7 @@
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
+  background-color: #fafbfd;
 }
 
 .browse-wrapper {
@@ -151,9 +152,11 @@
   position: relative;
   display: block;
   overflow: hidden;
-  object-fit: cover;
+  object-fit: fill;
   transition: height 0.5s ease;
   height: 225px;
+  width: 240px;
+  margin: auto;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }

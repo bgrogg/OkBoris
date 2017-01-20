@@ -1,6 +1,5 @@
 .essay-block {
   margin-bottom: 40px;
-  color: #474d59;
 }
 
 .essay-button {
@@ -8,16 +7,18 @@
   border: 0;
   padding: 0;
   cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
   margin-bottom: 6px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bolder;
   background: transparent;
 }
 
 .essay-normal {
   display: block;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bolder;
+  font-family: 'Open Sans', sans-serif;
   background: transparent;
   border: 0;
   padding: 0;
@@ -26,6 +27,7 @@
 
 .essay-title {
   float: left;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .essay-edit-pencil:before {
@@ -57,10 +59,11 @@
 
 
 .essay-text {
-  font-size: 16px;
+  font-size: 15px;
   display: block;
   margin-top: 14px;
   font-weight: lighter;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .edit-text {

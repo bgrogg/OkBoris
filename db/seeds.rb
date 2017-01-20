@@ -182,13 +182,31 @@ user6 = User.create!(
   msg_if: "Which one is Pam?"
 )
 
+user7 = User.create!(
+  username: "Dwight.",
+  password: "password",
+  location: "94105",
+  summary: "How would I describe myself? Three words. Hard-working, Alpha male. Jackhammer. Merciless. Insatiable.",
+  image_file_name: "http://res.cloudinary.com/dnpcubtwv/image/upload/v1484936395/office_avatars/dwightschrute_2.jpg",
+  gender: "male",
+  orientation: "straight",
+  age: "40",
+  life: "I am an Assistant Regional Manager at the Dunder Mifflin Scranton branch. Additionally, I am a Lackawanna County volunteer sheriff's deputy, own my own beet farm and am a practitioner of Gōjū-ryū, recently promoted to purple belt. I am also faster than 80% of all snakes.",
+  skills: "13-time winner of Salesman of the Month award in 2005 and Salesman of the Year. Also am an expert in martial arts weaponry, paintball, and pre-industrial German.",
+  favorites: "Battlestar Galactica. The crow. My desert island book would be the Physician's desk reference...hollowed out. Inside, waterproof matches, iodine tablets, beet seeds, protein bars, NASA blanket, and, in case I get bored, Harry Potter and the Sorcerer's Stone. No, Harry Potter and the Prisoner of Azkaban. Question: did my shoes come off in the plane crash?",
+  thinking: "When I die. I want to be frozen. And if they have to freeze me in pieces, so be it. I will wake up stronger than ever, because I will have used that time, to figure out exactly why I died. And what moves I could have used to defend myself better now that I know what hold he had me in.",
+  friday: "Getting drunk with my laser tag team or ",
+  msg_if: "You want to form an alliance. Special weight given to height, German fluency, and remaining child-bearing years."
+)
+
+
 #seeds responses to questions
 
 #Michael Scott responses
 
 r1 = Response.create(
   choice_id: 25,
-  user_id: 1,
+  user_id: user1.id,
   acceptable_choices: [c25.body, c26.body, c27.body],
   importance: 50,
   explanation: "Need someone who can keep up with me!"
@@ -196,7 +214,7 @@ r1 = Response.create(
 
 r2 = Response.create(
   choice_id: 23,
-  user_id: 1,
+  user_id: user1.id,
   acceptable_choices: [c23.body],
   importance: 50,
   explanation: "Gotta be able to take a joke."
@@ -204,15 +222,15 @@ r2 = Response.create(
 
 r3 = Response.create(
   choice_id: 6,
-  user_id: 1,
+  user_id: user1.id,
   acceptable_choices: [c6.body],
-  importance: 10,
+  importance: 50,
   explanation: ""
 )
 
 r4 = Response.create(
   choice_id: 8,
-  user_id: 1,
+  user_id: user1.id,
   acceptable_choices: [c8.body, c9.body],
   importance: 1,
   explanation: ""
@@ -220,7 +238,7 @@ r4 = Response.create(
 
 r5 = Response.create(
   choice_id: 2,
-  user_id: 1,
+  user_id: user1.id,
   acceptable_choices: [c1.body, c2.body],
   importance: 10,
   explanation: ""
@@ -231,7 +249,7 @@ r5 = Response.create(
 
 r4 = Response.create(
   choice_id: 17,
-  user_id: 2,
+  user_id: user2.id,
   acceptable_choices: [c17.body],
   importance: 50,
   explanation: ""
@@ -239,7 +257,7 @@ r4 = Response.create(
 
 r5 = Response.create(
   choice_id: 8,
-  user_id: 2,
+  user_id: user2.id,
   acceptable_choices: [c8.body],
   importance: 50,
   explanation: ""
@@ -247,7 +265,7 @@ r5 = Response.create(
 
 r6 = Response.create(
   choice_id: 27,
-  user_id: 2,
+  user_id: user2.id,
   acceptable_choices: [c25.body, c26.body, c27.body],
   importance: 50,
   explanation: ""
@@ -259,7 +277,7 @@ r6 = Response.create(
 
 r4 = Response.create(
   choice_id: 6,
-  user_id: 3,
+  user_id: user3.id,
   acceptable_choices: [c6.body],
   importance: 50,
   explanation: ""
@@ -267,7 +285,7 @@ r4 = Response.create(
 
 r5 = Response.create(
   choice_id: 20,
-  user_id: 3,
+  user_id: user3.id,
   acceptable_choices: [c20.body],
   importance: 50,
   explanation: ""
@@ -275,7 +293,7 @@ r5 = Response.create(
 
 r6 = Response.create(
   choice_id: 15,
-  user_id: 3,
+  user_id: user3.id,
   acceptable_choices: [c15.body, c14.body],
   importance: 50,
   explanation: ""
@@ -287,7 +305,7 @@ r6 = Response.create(
 
 r4 = Response.create(
   choice_id: 14,
-  user_id: 4,
+  user_id: user4.id,
   acceptable_choices: [c14.body],
   importance: 50,
   explanation: ""
@@ -295,7 +313,7 @@ r4 = Response.create(
 
 r5 = Response.create(
   choice_id: 19,
-  user_id: 4,
+  user_id: user4.id,
   acceptable_choices: [c19.body],
   importance: 50,
   explanation: "Leviticus 13:1"
@@ -303,35 +321,58 @@ r5 = Response.create(
 
 r6 = Response.create(
   choice_id: 1,
-  user_id: 4,
+  user_id: user4.id,
   acceptable_choices: [c1.body, c2.body],
   importance: 50,
   explanation: ""
 )
 
+r7 = Response.create(
+  choice_id: 4,
+  user_id: user4.id,
+  acceptable_choices: [c5.body],
+  importance: 50,
+  explanation: ""
+)
+
+r8 = Response.create(
+  choice_id: 6,
+  user_id: user4.id,
+  acceptable_choices: [c6.body],
+  importance: 50,
+  explanation: ""
+)
+
+r9 = Response.create(
+  choice_id: 12,
+  user_id: user4.id,
+  acceptable_choices: [c11.body, c12.body, c13.body],
+  importance: 50,
+  explanation: ""
+)
 
 # Oscar Martinez responses
 
 
-r4 = Response.create(
+r10 = Response.create(
   choice_id: 22,
-  user_id: 5,
+  user_id: user5.id,
   acceptable_choices: [c22.body],
   importance: 50,
   explanation: ""
 )
 
-r5 = Response.create(
+r11 = Response.create(
   choice_id: 9,
-  user_id: 5,
+  user_id: user5.id,
   acceptable_choices: [c9.body],
   importance: 50,
   explanation: ""
 )
 
-r6 = Response.create(
+r12 = Response.create(
   choice_id: 10,
-  user_id: 5,
+  user_id: user5.id,
   acceptable_choices: [c10.body, c11.body],
   importance: 50,
   explanation: ""
@@ -341,26 +382,76 @@ r6 = Response.create(
 # Creed Bratton responses
 
 
-r4 = Response.create(
+r13 = Response.create(
   choice_id: 6,
-  user_id: 6,
+  user_id: user6.id,
   acceptable_choices: [c6.body],
   importance: 50,
   explanation: ""
 )
 
-r5 = Response.create(
+r14 = Response.create(
   choice_id: 3,
-  user_id: 6,
+  user_id: user6.id,
   acceptable_choices: [c3.body, c2.body],
   importance: 50,
   explanation: ""
 )
 
-r6 = Response.create(
+r15 = Response.create(
   choice_id: 8,
-  user_id: 6,
+  user_id: user6.id,
   acceptable_choices: [c8.body],
+  importance: 50,
+  explanation: ""
+)
+
+# Dwight Schrute responses
+
+r16 = Response.create(
+  choice_id: 4,
+  user_id: user7.id,
+  acceptable_choices: [c5.body],
+  importance: 50,
+  explanation: ""
+)
+
+r17 = Response.create(
+  choice_id: 6,
+  user_id: user7.id,
+  acceptable_choices: [c6.body],
+  importance: 50,
+  explanation: ""
+)
+
+r18 = Response.create(
+  choice_id: 12,
+  user_id: user7.id,
+  acceptable_choices: [c11.body, c12.body, c13.body],
+  importance: 50,
+  explanation: ""
+)
+
+r19 = Response.create(
+  choice_id: 14,
+  user_id: user7.id,
+  acceptable_choices: [c14.body],
+  importance: 50,
+  explanation: ""
+)
+
+r20 = Response.create(
+  choice_id: 19,
+  user_id: user7.id,
+  acceptable_choices: [c19.body],
+  importance: 50,
+  explanation: ""
+)
+
+r21 = Response.create(
+  choice_id: 1,
+  user_id: user7.id,
+  acceptable_choices: [c1.body, c2.body],
   importance: 50,
   explanation: ""
 )
