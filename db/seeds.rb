@@ -22,14 +22,14 @@ c2 = Choice.create(question_id: q1.id, body: "No", order: 2)
 #seed users
 
 user1 = User.create!(
-  username: "worldsbestboss",
+  username: "datemike",
   password: "password",
   location: "94109",
   summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
            dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
            magna dictum eros, ante et integer nulla, id egestas, metus
            velit, eu tincidunt orci velit pulvinar sapien.",
-  image_file_name: "default_profile.png",
+  image_file_name: "http://res.cloudinary.com/dnpcubtwv/image/upload/q_94/v1484883926/michaelscott_x25fzy.png",
   gender: "male",
   orientation: "straight",
   age: "41",
@@ -44,11 +44,11 @@ user1 = User.create!(
 user2 = User.create!(
   username: "thefireguy",
   password: "password",
-  location: "94001",
+  location: "94534",
   summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
            dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
            magna dictum eros, ante et integer nulla.",
-  image_file_name: "default_profile.png",
+  image_file_name: "http://res.cloudinary.com/dnpcubtwv/image/upload/g_face/v1484884778/office_avatars/ryanhoward.jpg",
   gender: "male",
   orientation: "straight",
   age: "27",
@@ -61,14 +61,14 @@ user2 = User.create!(
 )
 
 user3 = User.create!(
-  username: "Beesly",
+  username: "dundermifflinthisispam",
   password: "password",
   location: "94105",
   summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
            dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
            magna dictum eros, ante et integer nulla, id egestas, metus
            velit, eu tincidunt orci velit pulvinar sapien.",
-  image_file_name: "default_profile.png",
+  image_file_name: "http://res.cloudinary.com/dnpcubtwv/image/upload/v1484885590/office_avatars/pambeesly.jpg",
   gender: "female",
   orientation: "straight",
   age: "32",
@@ -88,7 +88,7 @@ user4 = User.create!(
            dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
            magna dictum eros, ante et integer nulla, id egestas, metus
            velit, eu tincidunt orci velit pulvinar sapien.",
-  image_file_name: "default_profile.png",
+  image_file_name: "http://res.cloudinary.com/dnpcubtwv/image/upload/v1484885878/office_avatars/angelamartin.jpg",
   gender: "female",
   orientation: "straight",
   age: "35",
@@ -101,14 +101,14 @@ user4 = User.create!(
 )
 
 user5 = User.create!(
-  username: "actually",
+  username: "Actually",
   password: "password",
-  location: "94109",
+  location: "95838",
   summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
            dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
            magna dictum eros, ante et integer nulla, id egestas, metus
            velit, eu tincidunt orci velit pulvinar sapien.",
-  image_file_name: "default_profile.png",
+  image_file_name: "http://res.cloudinary.com/dnpcubtwv/image/upload/v1484886311/office_avatars/oscarmartinez.jpg",
   gender: "male",
   orientation: "gay",
   age: "48",
@@ -121,14 +121,14 @@ user5 = User.create!(
 )
 
 user6 = User.create!(
-  username: "Creed",
+  username: "CreedThoughts",
   password: "password",
   location: "94105",
   summary: "Lorem ipsum dolor sit amet, nibh vitae sit augue justo
            dignissim, ut fames, tortor nulla in sem sapien felis. Nibh
            magna dictum eros, ante et integer nulla, id egestas, metus
            velit, eu tincidunt orci velit pulvinar sapien.",
-  image_file_name: "default_profile.png",
+  image_file_name: "http://res.cloudinary.com/dnpcubtwv/image/upload/v1484886468/office_avatars/creedbratton.jpg",
   gender: "male",
   orientation: "bisexual",
   age: "63",
