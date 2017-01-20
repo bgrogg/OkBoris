@@ -195,8 +195,25 @@ user7 = User.create!(
   skills: "13-time winner of Salesman of the Month award in 2005 and Salesman of the Year. Also am an expert in martial arts weaponry, paintball, and pre-industrial German.",
   favorites: "Battlestar Galactica. The crow. My desert island book would be the Physician's desk reference...hollowed out. Inside, waterproof matches, iodine tablets, beet seeds, protein bars, NASA blanket, and, in case I get bored, Harry Potter and the Sorcerer's Stone. No, Harry Potter and the Prisoner of Azkaban. Question: did my shoes come off in the plane crash?",
   thinking: "When I die. I want to be frozen. And if they have to freeze me in pieces, so be it. I will wake up stronger than ever, because I will have used that time, to figure out exactly why I died. And what moves I could have used to defend myself better now that I know what hold he had me in.",
-  friday: "Getting drunk with my laser tag team or ",
+  friday: "Getting drunk with my laser tag team.",
   msg_if: "You want to form an alliance. Special weight given to height, German fluency, and remaining child-bearing years."
+)
+
+user8 = User.create!(
+  username: "ThreeHolePunchJim",
+  password: "password",
+  location: "95101",
+  summary: " My name is Jim Halpert and I am a sales rep, which is a very important job. Um, without me dozens literally dozens of small businesses would go paperless. They would have to write on their hands, or bed sheets, or who knows you know. Total chaos, total chaos. I mean or they could get their paper somewhere else. Staples maybe. I don't know.",
+  image_file_name: "http://res.cloudinary.com/dnpcubtwv/image/upload/v1484939438/office_avatars/jimhalpert_2.jpg",
+  gender: "male",
+  orientation: "straight",
+  age: "27",
+  life: "My job is to speak to clients on the phone about... uh, quantities and type of copier paper. You know, whether we can supply it to them. Whether they can pay for it. And... I'm boring myself just talking about this.",
+  skills: "Uh...things I'm good at? Winning Dundies, giving the 'Jim look', and pranking Dwight. One time I got him to knock himself in the head with his phone. That one took a while. I had to put more and more nickels into his handset until he got used to the weight. And then I took them all out.",
+  favorites: "Um...can't go without my daily Ham and cheese sandwich. Favorite movie is probably Dazed and Confused.",
+  thinking: "One day Michael came in complaining about a speed bump on the highway. I wonder who he ran over then.",
+  friday: "Happy hour at Poor Richard's.",
+  msg_if: "Message me if you know why it's smells like updog in here."
 )
 
 
@@ -452,6 +469,32 @@ r21 = Response.create(
   choice_id: 1,
   user_id: user7.id,
   acceptable_choices: [c1.body, c2.body],
+  importance: 50,
+  explanation: ""
+)
+
+#Jim Halpert responses
+
+r22 = Response.create(
+  choice_id: 6,
+  user_id: user8.id,
+  acceptable_choices: [c6.body],
+  importance: 50,
+  explanation: ""
+)
+
+r23 = Response.create(
+  choice_id: 20,
+  user_id: user8.id,
+  acceptable_choices: [c20.body],
+  importance: 50,
+  explanation: ""
+)
+
+r24 = Response.create(
+  choice_id: 15,
+  user_id: user8.id,
+  acceptable_choices: [c15.body, c14.body],
   importance: 50,
   explanation: ""
 )

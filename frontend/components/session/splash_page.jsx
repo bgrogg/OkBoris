@@ -40,7 +40,7 @@ class SplashPage extends React.Component {
   handleGuest(e) {
     e.preventDefault();
 
-    this.props.login({ username: "catlover44", password: "password"})
+    this.props.login({ username: "dundermifflinthisispam", password: "password"})
       .then(user => {
         this.props.router.push('/');
       });
