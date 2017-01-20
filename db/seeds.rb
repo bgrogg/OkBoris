@@ -222,7 +222,7 @@ user8 = User.create!(
 #Michael Scott responses
 
 r1 = Response.create(
-  choice_id: 25,
+  choice_id: c25.id,
   user_id: user1.id,
   acceptable_choices: [c25.body, c26.body, c27.body],
   importance: 50,
@@ -230,7 +230,7 @@ r1 = Response.create(
 )
 
 r2 = Response.create(
-  choice_id: 23,
+  choice_id: c23.id,
   user_id: user1.id,
   acceptable_choices: [c23.body],
   importance: 50,
@@ -238,7 +238,7 @@ r2 = Response.create(
 )
 
 r3 = Response.create(
-  choice_id: 6,
+  choice_id: c6.id,
   user_id: user1.id,
   acceptable_choices: [c6.body],
   importance: 50,
@@ -246,7 +246,7 @@ r3 = Response.create(
 )
 
 r4 = Response.create(
-  choice_id: 8,
+  choice_id: c8.id,
   user_id: user1.id,
   acceptable_choices: [c8.body, c9.body],
   importance: 1,
@@ -254,7 +254,7 @@ r4 = Response.create(
 )
 
 r5 = Response.create(
-  choice_id: 2,
+  choice_id: c2.id,
   user_id: user1.id,
   acceptable_choices: [c1.body, c2.body],
   importance: 10,
@@ -264,24 +264,24 @@ r5 = Response.create(
 
 # Ryan Howard responses
 
-r4 = Response.create(
-  choice_id: 17,
+r6 = Response.create(
+  choice_id: c17.id,
   user_id: user2.id,
   acceptable_choices: [c17.body],
   importance: 50,
   explanation: ""
 )
 
-r5 = Response.create(
-  choice_id: 8,
+r7 = Response.create(
+  choice_id: c8.id,
   user_id: user2.id,
   acceptable_choices: [c8.body],
   importance: 50,
   explanation: ""
 )
 
-r6 = Response.create(
-  choice_id: 27,
+r8 = Response.create(
+  choice_id: c27.id,
   user_id: user2.id,
   acceptable_choices: [c25.body, c26.body, c27.body],
   importance: 50,
@@ -292,24 +292,24 @@ r6 = Response.create(
 # Pam Beesly responses
 
 
-r4 = Response.create(
-  choice_id: 6,
+r9 = Response.create(
+  choice_id: c6.id,
   user_id: user3.id,
   acceptable_choices: [c6.body],
   importance: 50,
   explanation: ""
 )
 
-r5 = Response.create(
-  choice_id: 20,
+r10 = Response.create(
+  choice_id: c20.id,
   user_id: user3.id,
   acceptable_choices: [c20.body],
   importance: 50,
   explanation: ""
 )
 
-r6 = Response.create(
-  choice_id: 15,
+r11 = Response.create(
+  choice_id: c15.id,
   user_id: user3.id,
   acceptable_choices: [c15.body, c14.body],
   importance: 50,
@@ -320,48 +320,48 @@ r6 = Response.create(
 # Angela Martin responses
 
 
-r4 = Response.create(
-  choice_id: 14,
+r12 = Response.create(
+  choice_id: c14.id,
   user_id: user4.id,
   acceptable_choices: [c14.body],
   importance: 50,
   explanation: ""
 )
 
-r5 = Response.create(
-  choice_id: 19,
+r13 = Response.create(
+  choice_id: c19.id,
   user_id: user4.id,
   acceptable_choices: [c19.body],
   importance: 50,
   explanation: "Leviticus 13:1"
 )
 
-r6 = Response.create(
-  choice_id: 1,
+r14 = Response.create(
+  choice_id: c1.id,
   user_id: user4.id,
   acceptable_choices: [c1.body, c2.body],
   importance: 50,
   explanation: ""
 )
 
-r7 = Response.create(
-  choice_id: 4,
+r15 = Response.create(
+  choice_id: c4.id,
   user_id: user4.id,
   acceptable_choices: [c5.body],
   importance: 50,
   explanation: ""
 )
 
-r8 = Response.create(
-  choice_id: 6,
+r16 = Response.create(
+  choice_id: c6.id,
   user_id: user4.id,
   acceptable_choices: [c6.body],
   importance: 50,
   explanation: ""
 )
 
-r9 = Response.create(
-  choice_id: 12,
+r17 = Response.create(
+  choice_id: c12.id,
   user_id: user4.id,
   acceptable_choices: [c11.body, c12.body, c13.body],
   importance: 50,
@@ -371,24 +371,24 @@ r9 = Response.create(
 # Oscar Martinez responses
 
 
-r10 = Response.create(
-  choice_id: 22,
+r18 = Response.create(
+  choice_id: c22.id,
   user_id: user5.id,
   acceptable_choices: [c22.body],
   importance: 50,
   explanation: ""
 )
 
-r11 = Response.create(
-  choice_id: 9,
+r19 = Response.create(
+  choice_id: c9.id,
   user_id: user5.id,
   acceptable_choices: [c9.body],
   importance: 50,
   explanation: ""
 )
 
-r12 = Response.create(
-  choice_id: 10,
+r20 = Response.create(
+  choice_id: c10.id,
   user_id: user5.id,
   acceptable_choices: [c10.body, c11.body],
   importance: 50,
@@ -399,24 +399,24 @@ r12 = Response.create(
 # Creed Bratton responses
 
 
-r13 = Response.create(
-  choice_id: 6,
+r21 = Response.create(
+  choice_id: c6.id,
   user_id: user6.id,
   acceptable_choices: [c6.body],
   importance: 50,
   explanation: ""
 )
 
-r14 = Response.create(
-  choice_id: 3,
+r22 = Response.create(
+  choice_id: c3.id,
   user_id: user6.id,
   acceptable_choices: [c3.body, c2.body],
   importance: 50,
   explanation: ""
 )
 
-r15 = Response.create(
-  choice_id: 8,
+r23 = Response.create(
+  choice_id: c8.id,
   user_id: user6.id,
   acceptable_choices: [c8.body],
   importance: 50,
@@ -425,48 +425,48 @@ r15 = Response.create(
 
 # Dwight Schrute responses
 
-r16 = Response.create(
-  choice_id: 4,
+r24 = Response.create(
+  choice_id: c4.id,
   user_id: user7.id,
   acceptable_choices: [c5.body],
   importance: 50,
   explanation: ""
 )
 
-r17 = Response.create(
-  choice_id: 6,
+r25 = Response.create(
+  choice_id: c6.id,
   user_id: user7.id,
   acceptable_choices: [c6.body],
   importance: 50,
   explanation: ""
 )
 
-r18 = Response.create(
-  choice_id: 12,
+r26 = Response.create(
+  choice_id: c12.id,
   user_id: user7.id,
   acceptable_choices: [c11.body, c12.body, c13.body],
   importance: 50,
   explanation: ""
 )
 
-r19 = Response.create(
-  choice_id: 14,
+r27 = Response.create(
+  choice_id: c14.id,
   user_id: user7.id,
   acceptable_choices: [c14.body],
   importance: 50,
   explanation: ""
 )
 
-r20 = Response.create(
-  choice_id: 19,
+r28 = Response.create(
+  choice_id: c19.id,
   user_id: user7.id,
   acceptable_choices: [c19.body],
   importance: 50,
   explanation: ""
 )
 
-r21 = Response.create(
-  choice_id: 1,
+r29 = Response.create(
+  choice_id: c1.id,
   user_id: user7.id,
   acceptable_choices: [c1.body, c2.body],
   importance: 50,
@@ -475,24 +475,24 @@ r21 = Response.create(
 
 #Jim Halpert responses
 
-r22 = Response.create(
-  choice_id: 6,
+r30 = Response.create(
+  choice_id: c6.id,
   user_id: user8.id,
   acceptable_choices: [c6.body],
   importance: 50,
   explanation: ""
 )
 
-r23 = Response.create(
-  choice_id: 20,
+r31 = Response.create(
+  choice_id: c20.id,
   user_id: user8.id,
   acceptable_choices: [c20.body],
   importance: 50,
   explanation: ""
 )
 
-r24 = Response.create(
-  choice_id: 15,
+r32 = Response.create(
+  choice_id: c15.id,
   user_id: user8.id,
   acceptable_choices: [c15.body, c14.body],
   importance: 50,
