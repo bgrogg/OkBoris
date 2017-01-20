@@ -216,6 +216,23 @@ user8 = User.create!(
   msg_if: "Message me if you know why it's smells like updog in here."
 )
 
+user9 = User.create!(
+  username: "OMGOMGOMGOMGOMG",
+  password: "password",
+  location: "90001",
+  summary: "I like ice cream. I need a boyfriend. This year my New Year's Resolution was to get more attention.",
+  image_file_name: "http://res.cloudinary.com/dnpcubtwv/image/upload/v1484944232/office_avatars/kellykapoor.webp",
+  gender: "female",
+  orientation: "straight",
+  age: "27",
+  life: "Well I manage my department, and I've been doing that for several years now, and God I've learned a lot of life lessons along the way. It's just me in my department, but I am not easy to manage.",
+  skills: "I am one of the few people who looks hot eating a cupcake.",
+  favorites: "Don't even talk to me about Glee. Ugh, that show! First they say that Mr. Schue doesn't know anything about choreography, and then like three episodes later he's this fantastic choreographer? Pick a lane, people! And what was with Jesse's sudden turn on Rachel between Dream On and Funk? Where the heck did that come from? Honestly that show, it's irresponsible!",
+  thinking: "Beyonce, Snow Cones...basically, anything that is awesome.",
+  friday: "Freaking out, getting really drunk, and then telling someone I'm pregnant.",
+  msg_if: "If you're not going to be mean to me just because I'm the hot popular girl."
+)
+
 
 #seeds responses to questions
 
@@ -496,5 +513,32 @@ r32 = Response.create(
   user_id: user8.id,
   acceptable_choices: [c15.body, c14.body],
   importance: 50,
+  explanation: ""
+)
+
+
+# Kelly Kapoor responses
+
+r33 = Response.create(
+  choice_id: c27.id,
+  user_id: user9.id,
+  acceptable_choices: [c27.body, c26.body],
+  importance: 50,
+  explanation: ""
+)
+
+r34 = Response.create(
+  choice_id: c16.id,
+  user_id: user9.id,
+  acceptable_choices: [c16.body, c15.body],
+  importance: 50,
+  explanation: ""
+)
+
+r35 = Response.create(
+  choice_id: c18.id,
+  user_id: user9.id,
+  acceptable_choices: [c17.body],
+  importance: 10,
   explanation: ""
 )

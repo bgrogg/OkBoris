@@ -87,7 +87,7 @@ class UserIndex extends Component {
 
     return (
       <div className="preferences-bar">
-        <p className="browse-large">Searching for "{gender}" seeking "{ownGender}" within {this.distanceOptions()} miles from you.</p>
+        <p className="browse-large">Searching for <u>{gender}</u> seeking <u>{ownGender}</u> within {this.distanceOptions()} miles from you.</p>
       </div>
     );
 
