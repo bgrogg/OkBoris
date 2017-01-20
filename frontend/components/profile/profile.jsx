@@ -3,17 +3,17 @@ import { Link, withRouter } from 'react-router';
 import EssayContainer from './essay_container';
 import TabsContainer from '../tabs/tabs_container';
 import QuestionsContainer from '../question/questions_container';
+import merge from 'lodash/merge';
 
 class Profile extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      imageUrl: null,
-      imageFile: null
+      imageUrl: null
     };
 
-    this.handleImage = this.handleImage.bind(this);
+    this.cloudinate = this.cloudinate.bind(this);
     this.profilePic = this.profilePic.bind(this);
   }
 
@@ -34,21 +34,27 @@ class Profile extends React.Component {
     }
   }
 
-  handleImage(e) {
+  cloudinate(e) {
     e.preventDefault();
-    const user = this.props.profile;
-    const file = e.currentTarget.files[0];
-    const fileReader = new FileReader();
-    fileReader.onloadend = () => {
-      this.setState({ imageFile: file, imageUrl: fileReader.result });
-      const formData = new FormData();
-      formData.append("user[image]", file);
-      this.props.updateImage(formData, user);
-    };
 
-    if (file) {
-      fileReader.readAsDataURL(file);
-    }
+    cloudinary.openUploadWidget(
+      {
+        cloud_name: 'dnpcubtwv',
+        upload_preset: 'fycjpmnl',
+        theme: 'minimal',
+      },
+      (errors, imageInfo) => {
+        if (errors === null) {
+          let cloud_url = imageInfo[0].url;
+          this.setState({
+            imageUrl: cloud_url
+          });
+          const user = this.props.profile;
+          const updatedUser = merge(user, {image_file_name: cloud_url});
+          this.props.updateProfile(updatedUser);
+        }
+      }
+    );
   }
 
   profilePic() {
@@ -56,8 +62,7 @@ class Profile extends React.Component {
       return (
         <div>
           <img className="profile-pic" src={this.state.imageUrl} ></img>
-          <label htmlFor="update-input" className="update-image-block">Update</label>
-          <input id="update-input" type="file" onChange={ this.handleImage } />
+          <button className="update-image-block" onClick={this.cloudinate}>Update</button>
         </div>
       );
     } else {
