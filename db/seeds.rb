@@ -233,6 +233,40 @@ user9 = User.create!(
   msg_if: "If you're not going to be mean to me just because I'm the hot popular girl."
 )
 
+user10 = User.create!(
+  username: "COOLGUYKEVIN",
+  password: "password",
+  location: "90001",
+  summary: "I just want to sit on the beach and hot dogs. That's all I've ever wanted.",
+  image_file_name: "http://res.cloudinary.com/dnpcubtwv/image/upload/v1484955060/office_avatars/kevinmalone2.jpg",
+  gender: "male",
+  orientation: "straight",
+  age: "34",
+  life: "I'm an accountant. It's pretty good. Most of the time I just look at pictures of food on my computer.",
+  skills: "I make the best chili. It's pretty much the one thing I do well.",
+  favorites: "M&Ms, hot dogs, pigs in a blanket, pizza, cookies.....um...pie, pizza and Entourage.",
+  thinking: "I know unwanted emails are called spam, which is confusing because who doesn't like spam.",
+  friday: "Last weekend was good. I watched TV for 14 hours.",
+  msg_if: "Come on guys, don't fight over me."
+)
+
+user11 = User.create!(
+  username: "kellyerin",
+  password: "password",
+  location: "10001",
+  summary: "I'm new to Scranton. My last job was at a Taco Bell express and then they became a Taco Bell Express and, I don’t know, I couldn’t keep up.",
+  image_file_name: "http://res.cloudinary.com/dnpcubtwv/image/upload/v1484956633/office_avatars/kellyerinhannon_1.jpg",
+  gender: "female",
+  orientation: "straight",
+  age: "26",
+  life: "I'm the new receptionist at Dunder Mifflin. Long term, I've always wanted to be an accountant so maybe that. But I'm terrible at math.",
+  skills: "I'm good at cartwheels and arranging the toys on Michael's desk. And I've always been really good at dancing.",
+  favorites: "Poetry is dope!",
+  thinking: "Disposable cameras are fun. Though it does seem wasteful. And you never get to see your pictures.",
+  friday: "I have lots of friends and do TONs of normal things. Just like a normal person.",
+  msg_if: "You like to have fun!"
+)
+
 
 #seeds responses to questions
 
@@ -540,5 +574,57 @@ r35 = Response.create(
   user_id: user9.id,
   acceptable_choices: [c17.body],
   importance: 10,
+  explanation: ""
+)
+
+# Kevin Malone responses
+
+r36 = Response.create(
+  choice_id: c6.id,
+  user_id: user10.id,
+  acceptable_choices: [c6.body],
+  importance: 50,
+  explanation: ""
+)
+
+r37 = Response.create(
+  choice_id: c8.id,
+  user_id: user10.id,
+  acceptable_choices: [c8.body],
+  importance: 50,
+  explanation: ""
+)
+
+r38 = Response.create(
+  choice_id: c21.id,
+  user_id: user10.id,
+  acceptable_choices: [c21.body],
+  importance: 50,
+  explanation: ""
+)
+
+# Erin Hannon responses
+
+r39 = Response.create(
+  choice_id: c17.id,
+  user_id: user11.id,
+  acceptable_choices: [c17.body],
+  importance: 50,
+  explanation: ""
+)
+
+r40 = Response.create(
+  choice_id: c25.id,
+  user_id: user11.id,
+  acceptable_choices: [c26.body, c27.body, c28.body],
+  importance: 50,
+  explanation: ""
+)
+
+r41 = Response.create(
+  choice_id: c20.id,
+  user_id: user11.id,
+  acceptable_choices: [c20.body],
+  importance: 50,
   explanation: ""
 )
