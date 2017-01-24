@@ -71,7 +71,7 @@ class SplashPage extends React.Component {
           </div>
           <div className="splash-bottom">
             <div className="tag-line">
-              Join the best free job dating site for employees of Dunder Mifflin.
+              Join the best free dating site for employees of Dunder Mifflin.
             </div>
             <InitialRegistrationContainer />
             <div className="small-caption">
