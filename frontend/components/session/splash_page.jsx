@@ -97,7 +97,7 @@ class SplashPage extends React.Component {
             <div className="image-box">
               <img src="http://res.cloudinary.com/dnpcubtwv/image/upload/c_scale,h_116,w_104/v1484904069/office_avatars/hearts.jpg"></img>
               <p>
-                {"No one goes home until Michael finds a date."}
+                {"No one gets to go home until Michael finds a date."}
               </p>
             </div>
           </div>
