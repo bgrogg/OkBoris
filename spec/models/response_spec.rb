@@ -12,3 +12,14 @@
 #  updated_at         :datetime         not null
 #
 
+require 'rails_helper'
+
+RSpec.describe Response, type: :model do
+
+  describe 'associations' do
+    it { should have_one(:question).through(:choice) }
+    it { should belong_to(:user) }
+    it { should belong_to(:choice) }
+  end
+
+end

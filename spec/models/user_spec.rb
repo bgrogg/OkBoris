@@ -31,9 +31,14 @@ RSpec.describe User, type: :model do
 
   subject(:user) { FactoryGirl.build(:user) }
 
+  describe 'validations' do
+    it { should validate_presence_of(:username) }
+  end
 
-  it { should validate_presence_of(:username) }
-
-  it { should have_many(:responses) }
+  describe 'associations' do
+    it { should have_many(:responses) }
+    it { should have_many(:choices).through(:responses) }
+    it { should have_many(:questions).through(:responses) }
+  end
 
 end
